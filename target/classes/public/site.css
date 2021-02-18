@@ -1,0 +1,32 @@
+.div-table {
+    display: table;         
+    width: auto;         
+    background-color: #ffffff;         
+    border: 1px solid #666666;         
+    border-spacing: 5px; /* cellspacing:poor IE support for  this */
+    empty-cells: show;
+}
+.div-table-row {
+    display: table-row;
+    width: auto;
+    clear: both;
+}
+.div-table-col {
+    float: left; /* fix for  buggy browsers */
+    display: table-cell;         
+    width: 100px;         
+    background-color: #ffffff;
+}
+
+#map-popup {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.map-button-container img {
+    cursor: pointer;
+}
