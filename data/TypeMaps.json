@@ -1,0 +1,64 @@
+{
+    "type": "Boundary",
+    "image": "Boundary.jpg"
+},
+{
+    "type": "Bridges",
+    "image": "Bridges.jpg"
+},
+{
+    "type": "Castles",
+    "image": "Castles.jpg"
+},
+{
+    "type": "Churches",
+    "image": "Churches.jpg"
+},
+{
+    "type": "Curtain_Wall",
+    "image": "Curtain_Wall.jpg"
+},
+{
+    "type": "Curtain_Wall_0_48",
+    "image": "Curtain_Wall_0_48.jpg"
+},
+{
+    "type": "Farmhouse",
+    "image": "Farmhouse.jpg"
+},
+{
+    "type": "Forts_on_Wall",
+    "image": "Forts_on_Wall.jpg"
+},
+{
+    "type": "Forts_on_Wall_small",
+    "image": "Forts_on_Wall_small.jpg"
+},
+{
+    "type": "Gateways",
+    "image": "Gateways.jpg"
+},
+{
+    "type": "Milecastles",
+    "image": "Milecastles.jpg"
+},
+{
+    "type": "Other",
+    "image": "Other.jpg"
+},
+{
+    "type": "Outbuilding",
+    "image": "Outbuilding.jpg"
+},
+{
+    "type": "Tower",
+    "image": "Tower.jpg"
+},
+{
+    "type": "Turrets",
+    "image": "Turrets.jpg"
+},
+{
+    "type": "Vicarage",
+    "image": "Vicarage.jpg"
+}

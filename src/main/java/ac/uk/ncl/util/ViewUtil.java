@@ -1,8 +1,6 @@
 package ac.uk.ncl.util;
 
-import org.apache.velocity.app.*;
-import org.eclipse.jetty.http.*;
-import spark.*;
+import org.apache.velocity.app.*;import spark.*;
 import spark.template.velocity.*;
 import java.util.*;
 

@@ -17,6 +17,5 @@ public class Path {
         public final static String INDEX="/velocity/index.vm";
         public final static String INDSTONEEX="/velocity/submitstone.vm";
         public final static String MAPS="/velocity/maps.vm";
-        public final static String TEMP="/velocity/temp.vm";
     }
 }
