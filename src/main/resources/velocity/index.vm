@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="site.css"></head>
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 <body>
-    <div id="map-popup" style="background: white">
+ 
+   <div id="map-popup" style="background: white">
         <img src="" usemap="" alt="" style="border-style:none" />
         <map name="">
         </map>
@@ -144,7 +145,7 @@
                     // <area shape="circle" coords="911,143,3" onclick="getStructure('9')" title="Wallsend (Segedunum)" />
                     popup = $("#map-popup");
                     popup.find("img").attr("src", response.image);
-                    popup.find("img").attr("usemap", response.type);
+                    popup.find("img").attr("usemap", "#" + response.type);
                     map = popup.find("map");
                     //map.attr("id", response.type)
                     map.attr("name", response.type)
@@ -154,11 +155,6 @@
                         map.append(
                             $("<area>").attr("shape", coord.shape).attr("coords", coord.coords).attr("title", coord.title)
                             .attr("onclick", "getStructure('" + coord.struct + "')")
-                            /*.on("click", function (e) {
-                                e.preventDefault();
-                                getStructure(coord.struct);
-                                })
-                            .attr("href", "")*/
                         );
                     }
                     // <area shape="default" nohref="nohref" onclick="alert('Click the black dots')" alt="" >
