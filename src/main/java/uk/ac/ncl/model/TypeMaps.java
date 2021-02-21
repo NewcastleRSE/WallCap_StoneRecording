@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class TypeMaps {
 
-    @SerializedName("typeMaps")
+    @SerializedName("TypeMaps")
     @Expose
     private List<TypeMap> typeMaps = null;
 

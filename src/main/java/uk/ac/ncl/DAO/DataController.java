@@ -1,7 +1,9 @@
 package uk.ac.ncl.DAO;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
@@ -13,22 +15,24 @@ import java.util.Scanner;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import uk.ac.ncl.model.CoreRecord;
 import uk.ac.ncl.model.CoreRecords;
+import uk.ac.ncl.model.TypeMap;
 import uk.ac.ncl.model.TypeMaps;
 
 public class DataController {
     static Logger logger = LoggerFactory.getLogger(DataController.class);
     private static Hashtable<String, CoreRecord> coreRecords = new Hashtable<>();
-    private static Hashtable<String, String> typeMaps = new Hashtable<>();
+    private static Hashtable<String, TypeMap> typeMaps = new Hashtable<>();
     private static DataController dataController;
-    String jsonfile = "SparkSSD/data/B_Core_Data.json";
-    String csvfile = "SparkSSD/data/B_Core_Data.csv";
-    String typeMapsfile = "SparkSSD/data/TypeMaps.json";
+    String jsonfile = "data/B_Core_Data.json";
+    String csvfile = "data/B_Core_Data.csv";
+    static String typeMapsfile = "data/TypeMaps.json";
 
     private DataController() {
 
@@ -37,6 +41,7 @@ public class DataController {
     public static DataController getInstance() {
         if (dataController == null) {
             dataController = new DataController();
+            typeMaps = loadTypesMaps();
         }
         // Load records from json datafile
         CoreRecords coreRecords = dataController.loadCoreRecordsFromJSON();
@@ -70,10 +75,29 @@ public class DataController {
         return records;
     }
 
-    public Hashtable loadMapTypes() {
-        Hashtable<String, String> typeMap = new Hashtable<>();
+    private static Hashtable<String, TypeMap> loadTypesMaps() {
+        Hashtable<String, TypeMap> hsh_typeMaps = new Hashtable<>();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try {
+            FileReader fr = new FileReader(typeMapsfile);
+            TypeMaps typeMaps = gson.fromJson(fr, TypeMaps.class);
+            typeMaps.getTypeMaps().forEach(v -> {hsh_typeMaps.put(v.getType(), v);});
+            fr.close();
+        } catch (JsonSyntaxException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (JsonIOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-        return typeMap;
+        return hsh_typeMaps;
     }
 
     private CoreRecords loadCoreRecordsFromJSON() {
@@ -145,6 +169,20 @@ public class DataController {
      */
     public static void setCoreRecords(Hashtable<String, CoreRecord> coreRecords) {
         DataController.coreRecords = coreRecords;
+    }
+
+    /**
+     * @return the typeMaps
+     */
+    public static Hashtable<String, TypeMap> getTypeMaps() {
+        return typeMaps;
+    }
+
+    /**
+     * @param typeMaps the typeMaps to set
+     */
+    public static void setTypeMaps(Hashtable<String, TypeMap> typeMaps) {
+        DataController.typeMaps = typeMaps;
     }
 
 }

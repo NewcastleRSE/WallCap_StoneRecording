@@ -1,64 +1,458 @@
 {
-    "type": "Boundary",
-    "image": "Boundary.jpg"
-},
-{
-    "type": "Bridges",
-    "image": "Bridges.jpg"
-},
-{
-    "type": "Castles",
-    "image": "Castles.jpg"
-},
-{
-    "type": "Churches",
-    "image": "Churches.jpg"
-},
-{
-    "type": "Curtain_Wall",
-    "image": "Curtain_Wall.jpg"
-},
-{
-    "type": "Curtain_Wall_0_48",
-    "image": "Curtain_Wall_0_48.jpg"
-},
-{
-    "type": "Farmhouse",
-    "image": "Farmhouse.jpg"
-},
-{
-    "type": "Forts_on_Wall",
-    "image": "Forts_on_Wall.jpg"
-},
-{
-    "type": "Forts_on_Wall_small",
-    "image": "Forts_on_Wall_small.jpg"
-},
-{
-    "type": "Gateways",
-    "image": "Gateways.jpg"
-},
-{
-    "type": "Milecastles",
-    "image": "Milecastles.jpg"
-},
-{
-    "type": "Other",
-    "image": "Other.jpg"
-},
-{
-    "type": "Outbuilding",
-    "image": "Outbuilding.jpg"
-},
-{
-    "type": "Tower",
-    "image": "Tower.jpg"
-},
-{
-    "type": "Turrets",
-    "image": "Turrets.jpg"
-},
-{
-    "type": "Vicarage",
-    "image": "Vicarage.jpg"
+    "TypeMaps": [
+        {
+            "type": "Boundary_small",
+            "image": "images/maps/Boundary_small.png"
+        },
+        {
+            "type": "Bridges_small",
+            "image": "images/maps/Bridges_small.png"
+        },
+        {
+            "type": "Castles_small",
+            "image": "images/maps/Castles_small.png",
+            "coords": [
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Drumburgh Castle",
+                    "struct": "75"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Drawdykes Castle",
+                    "struct": "76"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Linstock Castle",
+                    "struct": "77"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Scaleby Castle",
+                    "struct": "78"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Triermain Castle",
+                    "struct": "79"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Blenkinsopp Castle",
+                    "struct": "80"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Thirlwall Castle",
+                    "struct": "81"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "",
+                    "title": "Halton Castle",
+                    "struct": "82"
+                }
+            ]
+        },
+        {
+            "type": "Churches_small",
+            "image": "images/maps/Churches_small.png",
+            "coords": [
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Michael",
+                    "struct": "56"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Bridget",
+                    "struct": "57"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Peter",
+                    "struct": "58"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Michael",
+                    "struct": "59"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Giles",
+                    "struct": "60"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Mary",
+                    "struct": "61"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "All Saints",
+                    "struct": "62"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Kentigern",
+                    "struct": "63"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Martin",
+                    "struct": "64"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Mary",
+                    "struct": "65"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "Upper Denton",
+                    "struct": "66"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Cuthbert",
+                    "struct": "0"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Michael",
+                    "struct": "67"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St John of Beverley",
+                    "struct": "68"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Oswald ",
+                    "struct": "69"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Giles",
+                    "struct": "70"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Andrew",
+                    "struct": "71"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "Halton Church Whittington",
+                    "struct": "72"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "Holy Cross Wallsend",
+                    "struct": "73"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "St Paul Jarrow",
+                    "struct": "74"
+                }
+            ]
+        },
+        {
+            "type": "Curtain_Wall_small",
+            "image": "images/maps/Curtain_Wall_small.png"
+        },
+        {
+            "type": "Curtain_Wall_0_48_small",
+            "image": "images/maps/Curtain_Wall_0_48_small.png"
+        },
+        {
+            "type": "Farmhouse_small",
+            "image": "images/maps/Farmhouse_small.png"
+        },
+        {
+            "type": "Forts_on_Wall_small",
+            "image": "images/maps/Forts_on_Wall_small.jpg",
+            "coords": [
+                {
+                    "shape": "circle",
+                    "coords": "336,138,4",
+                    "title": "Birdoswald (Banna)",
+                    "struct": "1"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "368,139,4",
+                    "title": "Carvoran (Magna)",
+                    "struct": "2"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "410,133,4",
+                    "title": "Great Chesters (Aesica)",
+                    "struct": "3"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "462,137,4",
+                    "title": "Vindolanda (Chesterholm)",
+                    "struct": "4"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "479,117,4",
+                    "title": "Housesteads (Vercovicium)",
+                    "struct": "5"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "542,95,4",
+                    "title": "Carrawburgh (Brocolitia)",
+                    "struct": "6"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "584,105,4",
+                    "title": "Chesters (Cilurnum)",
+                    "struct": "7"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "643,150,4",
+                    "title": "Corbridge (Coria)",
+                    "struct": "8"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Wallsend (Segedunum)",
+                    "struct": "9"
+                }
+            ]
+        },
+        {
+            "type": "Gateways_small",
+            "image": "images/maps/Gateways_small.png"
+        },
+        {
+            "type": "Milecastles_small",
+            "image": "images/maps/Milecastles_small.png",
+            "coords": [
+                {
+                    "shape": "circle",
+                    "coords": "643,150,4",
+                    "title": "Milecastle 49",
+                    "struct": "10"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 48",
+                    "struct": "11"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 44",
+                    "struct": "12"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 42",
+                    "struct": "13"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 39",
+                    "struct": "14"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 38",
+                    "struct": "15"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 37",
+                    "struct": "16"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 35",
+                    "struct": "17"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 33",
+                    "struct": "18"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 30",
+                    "struct": "19"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Milecastle 10",
+                    "struct": "20"
+                }
+            ]
+        },
+        {
+            "type": "Other_small",
+            "image": "images/maps/Other_small.png"
+        },
+        {
+            "type": "Outbuilding_small",
+            "image": "images/maps/Outbuilding_small.png"
+        },
+        {
+            "type": "Tower_small",
+            "image": "images/maps/Tower_small.png"
+        },
+        {
+            "type": "Turrets_small",
+            "image": "images/maps/Turrets_small.png",
+            "coords": [
+                {
+                    "shape": "circle",
+                    "coords": "643,150,4",
+                    "title": "Turret 52a",
+                    "struct": "21"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 51b",
+                    "struct": "22"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 51a",
+                    "struct": "23"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 49b",
+                    "struct": "24"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 48b",
+                    "struct": "25"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 48a",
+                    "struct": "26"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 45a",
+                    "struct": "27"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 44b",
+                    "struct": "28"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 41a",
+                    "struct": "29"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 35a",
+                    "struct": "30"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 34a",
+                    "struct": "31"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 33b",
+                    "struct": "32"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 29b",
+                    "struct": "33"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 29a",
+                    "struct": "34"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 26b",
+                    "struct": "35"
+                },
+                {
+                    "shape": "circle",
+                    "coords": "911,143,4",
+                    "title": "Turret 7b",
+                    "struct": "36"
+                }
+            ]
+        },
+        {
+            "type": "Vicarage_small",
+            "image": "images/maps/Vicarage_small.png"
+        }
+    ]
 }
