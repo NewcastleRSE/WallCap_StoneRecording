@@ -18,7 +18,7 @@ import uk.ac.ncl.index.IndexController;
  */
 public class App {
 	static Logger logger = LoggerFactory.getLogger(App.class);
-    static int port = 4567;
+    static int port = 80;
 
     public static void main(String[] args) {
         DataController.getInstance();
