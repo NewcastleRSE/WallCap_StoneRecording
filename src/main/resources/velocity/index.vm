@@ -30,6 +30,7 @@
     <script>
         // WHEN A BUTTON IS CLICKED IN THE PAGE DO THIS
         function mapButtonClicked(btn) {
+            $("body").find(".popup").each(function (index, popup) { $(popup).hide("slow"); });
             map = btn.attr('data-type');
             $.ajax({
                 url: "/maps", 
