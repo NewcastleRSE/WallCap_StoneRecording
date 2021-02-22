@@ -32,6 +32,5 @@ public class App {
         post("/submitstone", IndexController.submitStone);
         post("/maps", IndexController.getMap);
         post("/struct", IndexController.getStructure);
-        get("/temp", IndexController.getTemp);
     }
 }

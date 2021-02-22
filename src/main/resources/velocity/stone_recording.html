@@ -1,0 +1,194 @@
+<div id="element_popup" class="popup" style="background: white; border: 2px solid black;">
+    <h1>Enter Stone Record</h1>
+    <form id="record_stone" action="/recordstone" method="post">
+
+        <!-- SECTION 1 ROW 2 -->
+        <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" style="width:80px" align="center><label for="Site_No">Site_No</label><br/><input id="Site_No" type="text" value="" name="Site_No" size="4"/></div>
+                <div class="div-table-col" style="width:80px" align="center><label for="EID">EID</label><br/><input id="EID" type="text" value="" name="EID" size="4"/></div>
+                <div class="div-table-col" style="width:80px" align="center><label for="Stone_Ref">Stone_Ref</label><br/><input id="Stone_Ref" type="text" value="" name="Stone_Ref" size="4"/></div>
+                <div class="div-table-col" style="width:80px" align="center>
+                    <label for="Face">Face</label><br/>
+                    <select id="Face" name="Face">
+                        <option value="North">North</option>
+                        <option value="South">South</option>
+                        <option value="East">East</option>
+                        <option value="West">West</option>
+                        <option value="Top">Top</option>
+                    </select>
+                </div>
+                <div class="div-table-col" align="center><label for="Course">Course</label><br/><input id="Course" type="text" value="" name="Course" size="4"/></div>
+                <div class="div-table-col" align="center>
+                    <label for="Element">Element</label><br/>
+                    <select id="Element" name="Element">
+                        <option value="Foundation">Foundation</option>
+                        <option value="Voussoir">Voussoir</option>
+                        <option value="Footing">Footing</option>
+                        <option value="Window Head">Window Head</option>
+                        <option value="Offset">Offset</option>
+                        <option value="Door lining">Door lining</option>
+                        <option value="Ashlar">Ashlar</option>
+                        <option value="Column">Column</option>
+                        <option value="Block-in-course">Block-in-course</option>
+                        <option value="Capital">Capital</option>
+                        <option value="Squared rubble">Squared rubble</option>
+                        <option value="String course">String course</option>
+                        <option value="Coursed rubble">Coursed rubble</option>
+                        <option value="Water channel">Water channel</option>
+                   </select>
+                </div>
+                <div class="div-table-col" align="center><label for="Length">Length</label><br/><input id="Length" type="text" value="" name="Length" size="6"/></div>
+                <div class="div-table-col" align="center><label for="Height">Height</label><br/><input id="Height" type="text" value="" name="Height" size="4"/></div>
+                <div class="div-table-col" align="center><label for="Depth">Depth</label><br/><input id="Depth" type="text" value="" name="Depth" size="4"/></div>
+                <div class="div-table-col" align="center><label for="Diameter">Diameter</label><br/><input id="Diameter" type="text" value="" name="Diameter" size="6"/></div>
+            </div>
+        </div>
+
+        <!-- SECTION 1 ROW 2 -->
+        <div class="div-table">
+            <div class="div-table-row">
+                <div class="div-table-col" align="center><label for="Colour">Colour</label><br/><input id="Colour" type="text" value="" name="Colour"/></div>
+                <div class="div-table-col" align="center>
+                    <label for="Broad_geology">Broad geology</label><br/>
+                    <select id="Broad_geology" name="Broad_geology">
+                       <option value="Sandstone">Sandstone</option>
+                       <option value="Limestone">Limestone</option>
+                   </select>
+                </div>
+                <div class="div-table-col" style="width:100px" align="center>
+                    <label for="Lewis_hole">Lewis_hole</label><br/>
+                    <input id="Lewis_hole" type="checkbox" value="lewis_hole" name="Lewis_hole"/>
+                </div>
+                <div class="div-table-col"  style="width:100px"align="center>
+                    <label for="Reused">Reused</label><br/>
+                    <input id="Reused" type="checkbox" value="reused" name="Reused"/>
+                </div>
+                <div class="div-table-col"  style="width:100px"align="center>
+                    <label for="Masons_mark">Masons mark</label><br/>
+                    <input id="Masons_mark" type="checkbox" value="masons_mark" name="Masons_mark"/>
+                </div>
+                <div class="div-table-col" align="center><label for="Tooling">Main tooling type</label><br/><input id="Tooling" type="text" value="" name="Tooling"/></div>
+            </div>
+        </div>
+
+        <div class="div table">
+            <!-- SECTION 2 ROW 1-->
+            <div class="div-table-row">
+                <div class="div-table-col" align="center>
+                    <label for="Grain_Size">Grain Size</label><br/>
+                    <select id="Grain_Size" name="Grain_Size">
+                    <option value="Very course">Very course</option>
+                    <option value="Coarse">Coarse</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Fine">Fine</option>
+                </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Grain_Shape">Grain_Shape</label><br/>
+                    <select id="Grain_Shape" name="Grain_Shape">
+                        <option value="Well rounded">Well rounded</option>
+                        <option value="Rounded">Rounded</option>
+                        <option value="Sub-rounded">Sub-rounded</option>
+                        <option value="Sub-angular">Sub-angular</option>
+                        <option value="Angular">Angular</option>
+                        <option value="Very angular">Very angular</option>
+                    </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Grain_Roundness">Grain sphericity</label><br/>
+                    <select id="Grain_Roundness" name="Grain_Roundness">
+                    <option value="Low sphericity">Low sphericity</option>
+                    <option value="High sphericity">High sphericity</option>
+                </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Grain_Sorting">Grain Sorting</label><br/>
+                <select id="Grain_Sorting" name="Grain_Sorting">
+                    <option value="Well sorted">Well sorted</option>
+                    <option value="Moderately sorted">Moderately sorted</option>
+                    <option value="Poorly sorted">Poorly sorted</option>
+                    </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Grain_Types">Grain Types</label><br/>
+                    <select id="Grain_Types" name="Grain_Types" size="6" multiple>
+                    <option value="Quarts sorted">Quarts</option>
+                    <option value="Feldspar">Feldspar</option>
+                    <option value="Mica">Mica</option>
+                    <option value="Lithic fragments">Lithic fragments</option>
+                    <option value="Mud flakes">Mud flakes</option>
+                    <option value="Metal oxides">Metal oxides</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-table">
+            <!-- SECTION 2 ROW 2 -->
+            <div class="div-table-row">
+                <div class="div-table-col" align="center>
+                    <label for="Cement">Cement</label><br/>
+                    <select id="Cement" name="Cement" size="3" multiple>
+                    <option value="Quartz">Quartz</option>
+                    <option value="Calcite">Calcite</option>
+                    <option value="Iron Oxide">Iron Oxide</option>
+                    </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Veins_diagenesis">Veins diagenesis</label><br/>
+                    <select id="Veins_diagenesis" name="Veins_diagenesis" size="3" multiple>
+                        <option value="Quartz">Quartz</option>
+                    <option value="Calcite">Calcite</option>
+                    <option value="Iron Oxide">Iron Oxide</option>
+                </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Sedimentary_textures">Textures</label><br/>
+                    <select id="Sedimentary_textures" name="Sedimentary_textures">
+                    <option value="none">none</option>
+                    <option value="planar">planar</option>
+                    <option value="cross-bedded">cross-bedded</option>
+                    </select>
+                </div>
+                <div class="div-table-col" align="center>
+                    <label for="Bedding_scale">Bedding_scale</label><br/>
+                    <input id="Bedding_scale" type="text" value="" name="Bedding_scale"/>
+                </div>
+                <div class="div-table-col" align="center><label for="Fossils">Fossils</label><br/><input id="Fossils" type="text" value="" name="Fossils"/></div>
+            </div>
+        </div>
+
+        <div class="div-table">    
+            <!-- SECTION 2 ROW 3 -->
+            <div class="div-table-row">
+                <div class="div-table-col" align="center><label for="Notes_Comments">Notes_Comments</label><br/><input id="Notes_Comments" type="text" value="" name="Notes_Comments"/></div>
+                 <div class="div-table-col" align="center><label for="Fossil_photo">Fossil_photo</label><br/><input id="Fossil_photo" type="text" value="" name="Fossil_photo"/></div>
+            </div>
+            <!--
+            <div class="div-table-row">
+               <div class="div-table-col" align="center><label for="Photograph_List">Photograph_List</label><br/><input id="Photograph_List" type="text" value="" name="Photograph_List"/></div>
+                <div class="div-table-col" align="center><label for="Drawing">Drawing</label><br/><input id="Drawing" type="text" value="" name="Drawing"/></div>
+            </div>
+            -->
+            <div class="div-table-row">
+                <div class="div-table-col" align="center><label for="Recorded_by">Recorded_by</label><br/><input id="Recorded_by" type="text" value="" name="Recorded_by"/></div>
+                <div class="div-table-col" align="center><label for="Checked_by">Checked_by</label><br/><input id="Checked_by" type="text" value="" name="Checked_by"/></div>
+                <div class="div-table-col" align="center><label for="Date_Created">Date_Created</label><br/><input id="Date_Created" type="text" value="" name="Date_Created"/></div>
+                <div class="div-table-col" align="center><label for="Last_Modified">Last_Modified</label><br/><input id="Last_Modified" type="text" value="" name="Last_Modified"/></div>
+            </div>
+            <div class="div-table-row">
+                <div class="div-table-col" align="center><label for="Record_complete">Record_complete</label><br/><input id="Record_complete" type="text" value="" name="Record_complete"/></div>
+                <!--
+                <div class="div-table-col" align="center><label for="face_path">face_path</label><br/><input id="face_path" type="text" value="" name="face_path"/></div>
+                <div class="div-table-col" align="center><label for="left_path">left_path</label><br/><input id="left_path" type="text" value="" name="left_path"/></div>
+                <div class="div-table-col" align="center><label for="right_path">right_path</label><br/><input id="right_path" type="text" value="" name="right_path"/></div>
+                <div class="div-table-col" align="center><label for="reverse_path">reverse_path</label><br/><input id="reverse_path" type="text" value="" name="reverse_path"/></div>
+                <div class="div-table-col" align="center><label for="top_path">top_path</label><br/><input id="top_path" type="text" value="" name="top_path"/></div>
+                <div class="div-table-col" align="center><label for="base_path">base_path</label><br/><input id="base_path" type="text" value="" name="base_path"/></div>
+                <div class="div-table-col" align="center><label for="site_element">site_element</label><br/><input id="site_element" type="text" value="" name="site_element"/></div>
+                -->
+            </div>
+        </div>
+    </form>
+</div>

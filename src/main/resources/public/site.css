@@ -11,10 +11,15 @@
     width: auto;
     clear: both;
 }
-.div-table-col {
+.div-table-col-100 {
     float: left; /* fix for  buggy browsers */
     display: table-cell;         
     width: 100px;         
+    background-color: #ffffff;
+}
+.div-table-col {
+    float: left; /* fix for  buggy browsers */
+    display: table-cell; 
     background-color: #ffffff;
 }
 .div-texttable-col {
@@ -29,8 +34,8 @@
     background-color: #a3fd8c;
 }
 
-#map-popup {
-    /* display: none; */
+.popup {
+    display: none;
     position: fixed;
     overflow: auto;
     top: 50%;

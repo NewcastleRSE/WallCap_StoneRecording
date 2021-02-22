@@ -1,458 +1,862 @@
 {
     "TypeMaps": [
         {
-            "type": "Boundary_small",
-            "image": "images/maps/Boundary_small.png"
-        },
-        {
-            "type": "Bridges_small",
-            "image": "images/maps/Bridges_small.png"
-        },
-        {
-            "type": "Castles_small",
-            "image": "images/maps/Castles_small.png",
+            "image": "images/maps/Other_small.png",
+            "type": "Resited remains",
             "coords": [
                 {
+                    "coords": "985,54,8",
                     "shape": "circle",
-                    "coords": "",
-                    "title": "Drumburgh Castle",
-                    "struct": "75"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Drawdykes Castle",
-                    "struct": "76"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Linstock Castle",
-                    "struct": "77"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Scaleby Castle",
-                    "struct": "78"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Triermain Castle",
-                    "struct": "79"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Blenkinsopp Castle",
-                    "struct": "80"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Thirlwall Castle",
-                    "struct": "81"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "",
-                    "title": "Halton Castle",
-                    "struct": "82"
+                    "struct": "124",
+                    "title": "Wallsend Park"
                 }
             ]
         },
         {
-            "type": "Churches_small",
-            "image": "images/maps/Churches_small.png",
-            "coords": [
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Michael",
-                    "struct": "56"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Bridget",
-                    "struct": "57"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Peter",
-                    "struct": "58"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Michael",
-                    "struct": "59"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Giles",
-                    "struct": "60"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Mary",
-                    "struct": "61"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "All Saints",
-                    "struct": "62"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Kentigern",
-                    "struct": "63"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Martin",
-                    "struct": "64"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Mary",
-                    "struct": "65"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "Upper Denton",
-                    "struct": "66"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Cuthbert",
-                    "struct": "0"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Michael",
-                    "struct": "67"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St John of Beverley",
-                    "struct": "68"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Oswald ",
-                    "struct": "69"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Giles",
-                    "struct": "70"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Andrew",
-                    "struct": "71"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "Halton Church Whittington",
-                    "struct": "72"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "Holy Cross Wallsend",
-                    "struct": "73"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "St Paul Jarrow",
-                    "struct": "74"
-                }
-            ]
-        },
-        {
-            "type": "Curtain_Wall_small",
-            "image": "images/maps/Curtain_Wall_small.png"
-        },
-        {
-            "type": "Curtain_Wall_0_48_small",
-            "image": "images/maps/Curtain_Wall_0_48_small.png"
-        },
-        {
-            "type": "Farmhouse_small",
-            "image": "images/maps/Farmhouse_small.png"
-        },
-        {
-            "type": "Forts_on_Wall_small",
-            "image": "images/maps/Forts_on_Wall_small.jpg",
-            "coords": [
-                {
-                    "shape": "circle",
-                    "coords": "336,138,8",
-                    "title": "Birdoswald (Banna)",
-                    "struct": "1"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "368,139,8",
-                    "title": "Carvoran (Magna)",
-                    "struct": "2"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "410,133,8",
-                    "title": "Great Chesters (Aesica)",
-                    "struct": "3"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "462,137,8",
-                    "title": "Vindolanda (Chesterholm)",
-                    "struct": "4"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "479,117,8",
-                    "title": "Housesteads (Vercovicium)",
-                    "struct": "5"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "542,95,8",
-                    "title": "Carrawburgh (Brocolitia)",
-                    "struct": "6"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "584,105,8",
-                    "title": "Chesters (Cilurnum)",
-                    "struct": "7"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "643,150,8",
-                    "title": "Corbridge (Coria)",
-                    "struct": "8"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Wallsend (Segedunum)",
-                    "struct": "9"
-                }
-            ]
-        },
-        {
-            "type": "Gateways_small",
-            "image": "images/maps/Gateways_small.png"
-        },
-        {
-            "type": "Milecastles_small",
-            "image": "images/maps/Milecastles_small.png",
-            "coords": [
-                {
-                    "shape": "circle",
-                    "coords": "643,150,8",
-                    "title": "Milecastle 49",
-                    "struct": "10"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 48",
-                    "struct": "11"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 44",
-                    "struct": "12"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 42",
-                    "struct": "13"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 39",
-                    "struct": "14"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 38",
-                    "struct": "15"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 37",
-                    "struct": "16"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 35",
-                    "struct": "17"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 33",
-                    "struct": "18"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 30",
-                    "struct": "19"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Milecastle 10",
-                    "struct": "20"
-                }
-            ]
-        },
-        {
+            "image": "images/maps/Other_small.png",
             "type": "Other_small",
-            "image": "images/maps/Other_small.png"
-        },
-        {
-            "type": "Outbuilding_small",
-            "image": "images/maps/Outbuilding_small.png"
-        },
-        {
-            "type": "Tower_small",
-            "image": "images/maps/Tower_small.png"
-        },
-        {
-            "type": "Turrets_small",
-            "image": "images/maps/Turrets_small.png",
             "coords": [
                 {
+                    "coords": "26,97,8",
                     "shape": "circle",
-                    "coords": "643,150,8",
-                    "title": "Turret 52a",
-                    "struct": "21"
+                    "struct": "121",
+                    "title": "Hesket House"
                 },
                 {
+                    "coords": "104,125,8",
                     "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 51b",
-                    "struct": "22"
+                    "struct": "122",
+                    "title": "Cross Farm"
                 },
                 {
+                    "coords": "700,75,8",
                     "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 51a",
-                    "struct": "23"
+                    "struct": "123",
+                    "title": "Orchard Vale"
                 },
                 {
+                    "coords": "985,54,8",
                     "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 49b",
-                    "struct": "24"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 48b",
-                    "struct": "25"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 48a",
-                    "struct": "26"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 45a",
-                    "struct": "27"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 44b",
-                    "struct": "28"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 41a",
-                    "struct": "29"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 35a",
-                    "struct": "30"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 34a",
-                    "struct": "31"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 33b",
-                    "struct": "32"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 29b",
-                    "struct": "33"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 29a",
-                    "struct": "34"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 26b",
-                    "struct": "35"
-                },
-                {
-                    "shape": "circle",
-                    "coords": "911,143,8",
-                    "title": "Turret 7b",
-                    "struct": "36"
+                    "struct": "124",
+                    "title": "Wallsend Park"
                 }
             ]
         },
         {
+            "image": "images/maps/Outbuilding_small.png",
+            "type": "Outbuilding_small",
+            "coords": [
+                {
+                    "coords": "532,132,8",
+                    "shape": "circle",
+                    "struct": "112",
+                    "title": "Dacre Hall"
+                },
+                {
+                    "coords": "79.165,8",
+                    "shape": "circle",
+                    "struct": "108",
+                    "title": "Brachenrigg"
+                },
+                {
+                    "coords": "453,163,8",
+                    "shape": "circle",
+                    "struct": "109",
+                    "title": "The Nook"
+                },
+                {
+                    "coords": "465,133,8",
+                    "shape": "circle",
+                    "struct": "110",
+                    "title": "Cambeckhill Farm"
+                },
+                {
+                    "coords": "532,146,8",
+                    "shape": "circle",
+                    "struct": "111",
+                    "title": "Abbey Farm"
+                },
+                {
+                    "coords": "599,107,8",
+                    "shape": "circle",
+                    "struct": "113",
+                    "title": "High House"
+                },
+                {
+                    "coords": "66,146,8",
+                    "shape": "circle",
+                    "struct": "107",
+                    "title": "Bowness Farm"
+                },
+                {
+                    "coords": "617,130,8",
+                    "shape": "circle",
+                    "struct": "114",
+                    "title": "Temon"
+                },
+                {
+                    "coords": "632,105,8",
+                    "shape": "circle",
+                    "struct": "115",
+                    "title": "Throp"
+                },
+                {
+                    "coords": "966,25,8",
+                    "shape": "circle",
+                    "struct": "116",
+                    "title": "Carrawburgh Farm"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Boundary_small.png",
+            "type": "Boundary_small",
+            "coords": [
+                {
+                    "coords": "147,181,8",
+                    "shape": "circle",
+                    "struct": "118",
+                    "title": "Boundary wall Lanercost Priory"
+                },
+                {
+                    "coords": "134,185,8",
+                    "shape": "circle",
+                    "struct": "117",
+                    "title": "Gateway Arch Lanercost Priory"
+                },
+                {
+                    "coords": "949,56,8",
+                    "shape": "circle",
+                    "struct": "120",
+                    "title": "Churchyard wall St Oswalds"
+                },
+                {
+                    "coords": "149,182,8",
+                    "shape": "circle",
+                    "struct": "119",
+                    "title": "Precinct wall Lanercost Priory"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Bridges_small.png",
+            "type": "Bridges_small",
+            "coords": [
+                {
+                    "coords": "43,150,8",
+                    "shape": "circle",
+                    "struct": "53",
+                    "title": "Willowford Bridge Abutment"
+                },
+                {
+                    "coords": "766,60,8",
+                    "shape": "circle",
+                    "struct": "54",
+                    "title": "Chesters Bridge Abutment"
+                },
+                {
+                    "coords": "930,198,8",
+                    "shape": "circle",
+                    "struct": "55",
+                    "title": "Corbridge Bridge Abutment"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Castles_small.png",
+            "type": "Castles_small",
+            "coords": [
+                {
+                    "coords": "44,149,8",
+                    "shape": "circle",
+                    "struct": "75",
+                    "title": "Drumburgh Castle"
+                },
+                {
+                    "coords": "184,160,8",
+                    "shape": "circle",
+                    "struct": "76",
+                    "title": "Drawdykes Castle"
+                },
+                {
+                    "coords": "193,160,8",
+                    "shape": "circle",
+                    "struct": "77",
+                    "title": "Linstock Castle"
+                },
+                {
+                    "coords": "211,124,8",
+                    "shape": "circle",
+                    "struct": "78",
+                    "title": "Scaleby Castle"
+                },
+                {
+                    "coords": "344,84,8",
+                    "shape": "circle",
+                    "struct": "79",
+                    "title": "Triermain Castle"
+                },
+                {
+                    "coords": "408,105,8",
+                    "shape": "circle",
+                    "struct": "80",
+                    "title": "Blenkinsopp Castle"
+                },
+                {
+                    "coords": "403,90,8",
+                    "shape": "circle",
+                    "struct": "81",
+                    "title": "Thirlwall Castle"
+                },
+                {
+                    "coords": "710,75,8",
+                    "shape": "circle",
+                    "struct": "82",
+                    "title": "Halton Castle"
+                }
+            ]
+        },
+        {
+            "image": "Churches_small",
+            "type": "images/maps/Churches_small.png",
+            "coords": [
+                {
+                    "coords": "18,105,8",
+                    "shape": "circle",
+                    "struct": "56",
+                    "title": "St Michael Bowness"
+                },
+                {
+                    "coords": "23,151,8",
+                    "shape": "circle",
+                    "struct": "57",
+                    "title": "St Bridget Kirkbride"
+                },
+                {
+                    "coords": "88,159,8",
+                    "shape": "circle",
+                    "struct": "58",
+                    "title": "St Peter Kirkbampton"
+                },
+                {
+                    "coords": "108,136,8",
+                    "shape": "circle",
+                    "struct": "59",
+                    "title": "St Michael Burgh by Sands"
+                },
+                {
+                    "coords": "109,178,8",
+                    "shape": "circle",
+                    "struct": "60",
+                    "title": "St Giles Orton"
+                },
+                {
+                    "coords": "125,135,8",
+                    "shape": "circle",
+                    "struct": "61",
+                    "title": "St Mary Beaumont"
+                },
+                {
+                    "coords": "211,101,8",
+                    "shape": "circle",
+                    "struct": "62",
+                    "title": "All Saints Scaleby"
+                },
+                {
+                    "coords": "255,115,8",
+                    "shape": "circle",
+                    "struct": "63",
+                    "title": "St Kentigern Irthington"
+                },
+                {
+                    "coords": "266,115,8",
+                    "shape": "circle",
+                    "struct": "64",
+                    "title": "St Martin Brampton"
+                },
+                {
+                    "coords": "306,196,8",
+                    "shape": "circle",
+                    "struct": "65",
+                    "title": "St Mary Burtholme"
+                },
+                {
+                    "coords": "358,81,8",
+                    "shape": "circle",
+                    "struct": "66",
+                    "title": "Upper Denton"
+                },
+                {
+                    "coords": "616,72,8",
+                    "shape": "circle",
+                    "struct": "67",
+                    "title": "St Michael Warden"
+                },
+                {
+                    "coords": "633,79,8",
+                    "shape": "circle",
+                    "struct": "68",
+                    "title": "St John of Beverley Acomb"
+                },
+                {
+                    "coords": "636,46,8",
+                    "shape": "circle",
+                    "struct": "69",
+                    "title": "St Oswald Wall"
+                },
+                {
+                    "coords": "631,25,8",
+                    "shape": "circle",
+                    "struct": "70",
+                    "title": "St Giles Chollerton"
+                },
+                {
+                    "coords": "680,90,8",
+                    "shape": "circle",
+                    "struct": "71",
+                    "title": "St Andrew Corbridge"
+                },
+                {
+                    "coords": "688,61,8",
+                    "shape": "circle",
+                    "struct": "72",
+                    "title": "Halton Church Whittington"
+                },
+                {
+                    "coords": "956,65,8",
+                    "shape": "circle",
+                    "struct": "73",
+                    "title": "Holy Cross Wallsend"
+                },
+                {
+                    "coords": "984,83,8",
+                    "shape": "circle",
+                    "struct": "74",
+                    "title": "St Paul Jarrow"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Curtain_Wall_small.png",
+            "type": "Curtain_Wall_small",
+            "coords": [
+                {
+                    "coords": "974,43,8",
+                    "shape": "circle",
+                    "struct": "38",
+                    "title": "Buddle Street"
+                },
+                {
+                    "coords": "904,73,8",
+                    "shape": "circle",
+                    "struct": "39",
+                    "title": "Shields Road"
+                },
+                {
+                    "coords": "557,18,8",
+                    "shape": "circle",
+                    "struct": "40",
+                    "title": "Heddon-on-the-Wall"
+                },
+                {
+                    "coords": "975,180,8",
+                    "shape": "circle",
+                    "struct": "41",
+                    "title": "Planetrees"
+                },
+                {
+                    "coords": "954,172,8",
+                    "shape": "circle",
+                    "struct": "42",
+                    "title": "Brunton"
+                },
+                {
+                    "coords": "863,136,8",
+                    "shape": "circle",
+                    "struct": "43",
+                    "title": "Black Carts"
+                },
+                {
+                    "coords": "651,165,8",
+                    "shape": "circle",
+                    "struct": "44",
+                    "title": "Sewingshields"
+                },
+                {
+                    "coords": "604,204,8",
+                    "shape": "circle",
+                    "struct": "45",
+                    "title": "Bardon Mill"
+                },
+                {
+                    "coords": "552,227,8",
+                    "shape": "circle",
+                    "struct": "46",
+                    "title": "Henshaw"
+                },
+                {
+                    "coords": "533,231,8",
+                    "shape": "circle",
+                    "struct": "47",
+                    "title": "West of Peel Gap tower"
+                },
+                {
+                    "coords": "489,237,8",
+                    "shape": "circle",
+                    "struct": "48",
+                    "title": "Melkridge"
+                },
+                {
+                    "coords": "445,252,8",
+                    "shape": "circle",
+                    "struct": "49",
+                    "title": "Haltwhistle"
+                },
+                {
+                    "coords": "385,250,8",
+                    "shape": "circle",
+                    "struct": "50",
+                    "title": "Greenhead"
+                },
+                {
+                    "coords": "327,263,8",
+                    "shape": "circle",
+                    "struct": "51",
+                    "title": "Walltown Crags"
+                },
+                {
+                    "coords": "217,264,8",
+                    "shape": "circle",
+                    "struct": "52",
+                    "title": "Willowford Wall"
+                },
+                {
+                    "coords": "954,171,8",
+                    "shape": "circle",
+                    "struct": "125",
+                    "title": "Brunton"
+                },
+                {
+                    "coords": "976,179,8",
+                    "shape": "circle",
+                    "struct": "126",
+                    "title": "Hare Hill"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Farmhouse_small.png",
+            "type": "Farmhouse_small",
+            "coords": [
+                {
+                    "coords": "30,201,8",
+                    "shape": "circle",
+                    "struct": "93",
+                    "title": "The Nook"
+                },
+                {
+                    "coords": "80,194,8",
+                    "shape": "circle",
+                    "struct": "94",
+                    "title": "Bleatarn Park"
+                },
+                {
+                    "coords": "95,161,8",
+                    "shape": "circle",
+                    "struct": "95",
+                    "title": "Cambeckhill"
+                },
+                {
+                    "coords": "235,142,8",
+                    "shape": "circle",
+                    "struct": "96",
+                    "title": "High House"
+                },
+                {
+                    "coords": "242,132,8",
+                    "shape": "circle",
+                    "struct": "97",
+                    "title": "Lanerton"
+                },
+                {
+                    "coords": "262,159,8",
+                    "shape": "circle",
+                    "struct": "98",
+                    "title": "Temon"
+                },
+                {
+                    "coords": "279,131,8",
+                    "shape": "circle",
+                    "struct": "99",
+                    "title": "Throp"
+                },
+                {
+                    "coords": "646,43,8",
+                    "shape": "circle",
+                    "struct": "100",
+                    "title": "Carrawburgh Farm"
+                },
+                {
+                    "coords": "862,52,8",
+                    "shape": "circle",
+                    "struct": "101",
+                    "title": "East Farmhouse"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Forts_on_Wall_small.jpg",
+            "type": "Forts_on_Wall_small",
+            "coords": [
+                {
+                    "coords": "336,138,8",
+                    "shape": "circle",
+                    "struct": "1",
+                    "title": "Birdoswald"
+                },
+                {
+                    "coords": "368,139,8",
+                    "shape": "circle",
+                    "struct": "2",
+                    "title": "Carvoran"
+                },
+                {
+                    "coords": "410,133,8",
+                    "shape": "circle",
+                    "struct": "3",
+                    "title": "Great Chesters"
+                },
+                {
+                    "coords": "462,137,8",
+                    "shape": "circle",
+                    "struct": "4",
+                    "title": "Vindolanda"
+                },
+                {
+                    "coords": "479,117,8",
+                    "shape": "circle",
+                    "struct": "5",
+                    "title": "Housesteads"
+                },
+                {
+                    "coords": "542,95,8",
+                    "shape": "circle",
+                    "struct": "6",
+                    "title": "Carrawburgh"
+                },
+                {
+                    "coords": "584,105,8",
+                    "shape": "circle",
+                    "struct": "7",
+                    "title": "Chesters"
+                },
+                {
+                    "coords": "643,150,8",
+                    "shape": "circle",
+                    "struct": "8",
+                    "title": "Corbridge"
+                },
+                {
+                    "coords": "911,143,8",
+                    "shape": "circle",
+                    "struct": "9",
+                    "title": "Wallsend"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Gateways_small.png",
+            "type": "Gateways_small",
+            "coords": [
+                {
+                    "coords": "525,37,8",
+                    "shape": "circle",
+                    "struct": "37",
+                    "title": "Knag Burn Gateway"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/House_small.png",
+            "type": "House_small",
+            "coords": [
+                {
+                    "coords": "91,138,8",
+                    "shape": "circle",
+                    "struct": "83",
+                    "title": "Barracks House"
+                },
+                {
+                    "coords": "489,117,8",
+                    "shape": "circle",
+                    "struct": "84",
+                    "title": "The Cottage"
+                },
+                {
+                    "coords": "543,90,8",
+                    "shape": "circle",
+                    "struct": "85",
+                    "title": "Castlesteads"
+                },
+                {
+                    "coords": "559,68,8",
+                    "shape": "circle",
+                    "struct": "86",
+                    "title": "Orchard House"
+                },
+                {
+                    "coords": "641,67,8",
+                    "shape": "circle",
+                    "struct": "87",
+                    "title": "Bell's Cottage"
+                },
+                {
+                    "coords": "648,101,8",
+                    "shape": "circle",
+                    "struct": "88",
+                    "title": "The Stonehouse"
+                },
+                {
+                    "coords": "645,114,8",
+                    "shape": "circle",
+                    "struct": "89",
+                    "title": "Scarrow Hill"
+                },
+                {
+                    "coords": "758,38,8",
+                    "shape": "circle",
+                    "struct": "90",
+                    "title": "Hall Terrace (1-4)"
+                },
+                {
+                    "coords": "762,29,8",
+                    "shape": "circle",
+                    "struct": "91",
+                    "title": "Dinmont House"
+                },
+                {
+                    "coords": "887,77,8",
+                    "shape": "circle",
+                    "struct": "92",
+                    "title": "Coldor (Valley View/Oakdene)"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Milecastles_small.png",
+            "type": "Milecastles_small",
+            "coords": [
+                {
+                    "coords": "310,178,8",
+                    "shape": "circle",
+                    "struct": "10",
+                    "title": "Milecastle 49"
+                },
+                {
+                    "coords": "327,180,8",
+                    "shape": "circle",
+                    "struct": "11",
+                    "title": "Milecastle 48"
+                },
+                {
+                    "coords": "403,170,8",
+                    "shape": "circle",
+                    "struct": "12",
+                    "title": "Milecastle 44"
+                },
+                {
+                    "coords": "439,173,8",
+                    "shape": "circle",
+                    "struct": "13",
+                    "title": "Milecastle 42"
+                },
+                {
+                    "coords": "500,160,8",
+                    "shape": "circle",
+                    "struct": "14",
+                    "title": "Milecastle 39"
+                },
+                {
+                    "coords": "517,153,8",
+                    "shape": "circle",
+                    "struct": "15",
+                    "title": "Milecastle 38"
+                },
+                {
+                    "coords": "534,147,8",
+                    "shape": "circle",
+                    "struct": "16",
+                    "title": "Milecastle 37"
+                },
+                {
+                    "coords": "561,126,8",
+                    "shape": "circle",
+                    "struct": "17",
+                    "title": "Milecastle 35"
+                },
+                {
+                    "coords": "517,119,8",
+                    "shape": "circle",
+                    "struct": "18",
+                    "title": "Milecastle 33"
+                },
+                {
+                    "coords": "657,106,8",
+                    "shape": "circle",
+                    "struct": "19",
+                    "title": "Milecastle 30"
+                },
+                {
+                    "coords": "863,122,8",
+                    "shape": "circle",
+                    "struct": "20",
+                    "title": "Milecastle 10"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Tower_small.png",
+            "type": "Tower_small",
+            "coords": [
+                {
+                    "coords": "54,24,8",
+                    "shape": "circle",
+                    "struct": "104",
+                    "title": "Cocklaw Tower"
+                },
+                {
+                    "coords": "402,502,8",
+                    "shape": "circle",
+                    "struct": "105",
+                    "title": "Vicars Pele"
+                },
+                {
+                    "coords": "946,276,8",
+                    "shape": "circle",
+                    "struct": "106",
+                    "title": "Welton Hall"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Turrets_small.png",
+            "type": "Turrets_small",
+            "coords": [
+                {
+                    "coords": "977,311,8",
+                    "shape": "circle",
+                    "struct": "21",
+                    "title": "Turret 52a"
+                },
+                {
+                    "coords": "16,349,8",
+                    "shape": "circle",
+                    "struct": "22",
+                    "title": "Turret 51b"
+                },
+                {
+                    "coords": "28,344,8",
+                    "shape": "circle",
+                    "struct": "23",
+                    "title": "Turret 51a"
+                },
+                {
+                    "coords": "91,320,8",
+                    "shape": "circle",
+                    "struct": "24",
+                    "title": "Turret 49b"
+                },
+                {
+                    "coords": "127,312,8",
+                    "shape": "circle",
+                    "struct": "25",
+                    "title": "Turret 48b"
+                },
+                {
+                    "coords": "139,318,8",
+                    "shape": "circle",
+                    "struct": "26",
+                    "title": "Turret 48a"
+                },
+                {
+                    "coords": "259,316,8",
+                    "shape": "circle",
+                    "struct": "27",
+                    "title": "Turret 45a"
+                },
+                {
+                    "coords": "278,307,8",
+                    "shape": "circle",
+                    "struct": "28",
+                    "title": "Turret 44b"
+                },
+                {
+                    "coords": "397,302,8",
+                    "shape": "circle",
+                    "struct": "29",
+                    "title": "Turret 41a"
+                },
+                {
+                    "coords": "599,216,8",
+                    "shape": "circle",
+                    "struct": "30",
+                    "title": "Turret 35a"
+                },
+                {
+                    "coords": "630,207,8",
+                    "shape": "circle",
+                    "struct": "31",
+                    "title": "Turret 34a"
+                },
+                {
+                    "coords": "653,204,8",
+                    "shape": "circle",
+                    "struct": "32",
+                    "title": "Turret 33b"
+                },
+                {
+                    "coords": "809,179,8",
+                    "shape": "circle",
+                    "struct": "33",
+                    "title": "Turret 29b"
+                },
+                {
+                    "coords": "822,184,8",
+                    "shape": "circle",
+                    "struct": "34",
+                    "title": "Turret 29a"
+                },
+                {
+                    "coords": "922,223,8",
+                    "shape": "circle",
+                    "struct": "35",
+                    "title": "Turret 26b"
+                },
+                {
+                    "coords": "714,115,8",
+                    "shape": "circle",
+                    "struct": "36",
+                    "title": "Turret 7b"
+                }
+            ]
+        },
+        {
+            "image": "images/maps/Vicarage_small.png",
             "type": "Vicarage_small",
-            "image": "images/maps/Vicarage_small.png"
+            "coords": [
+                {
+                    "coords": "286,221,8",
+                    "shape": "circle",
+                    "struct": "102",
+                    "title": "The Vicarage"
+                },
+                {
+                    "coords": "714,91,8",
+                    "shape": "circle",
+                    "struct": "103",
+                    "title": "Old Vicarage"
+                }
+            ]
         }
     ]
 }
