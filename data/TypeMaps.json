@@ -217,8 +217,8 @@
             ]
         },
         {
-            "image": "Churches_small",
-            "type": "images/maps/Churches_small.png",
+            "image": "images/maps/Churches_small.png",
+            "type": "Churches_small",
             "coords": [
                 {
                     "coords": "18,105,8",
