@@ -34,6 +34,10 @@ public class App {
         post("/struct", IndexController.getStructure);
     }
 
+    /**
+     * https://sparktutorials.github.io/2015/08/24/spark-heroku.html
+     * @return
+     */
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
