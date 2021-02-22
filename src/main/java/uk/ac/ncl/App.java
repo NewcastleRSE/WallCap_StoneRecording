@@ -18,7 +18,7 @@ import uk.ac.ncl.index.IndexController;
  */
 public class App {
 	static Logger logger = LoggerFactory.getLogger(App.class);
-    static int port = 80;
+    static int port = getHerokuAssignedPort();
 
     public static void main(String[] args) {
         DataController.getInstance();
@@ -32,5 +32,13 @@ public class App {
         post("/submitstone", IndexController.submitStone);
         post("/maps", IndexController.getMap);
         post("/struct", IndexController.getStructure);
+    }
+
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 }
