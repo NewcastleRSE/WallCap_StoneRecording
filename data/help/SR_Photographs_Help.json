@@ -1,0 +1,8 @@
+{
+  "help_data": [
+    {
+      "key": "Photographs",
+      "value": "Click on the + symbol to add a photograph and the - symbol to delete a photograph. You can only include the views that are available, so many records will only have one or two photographs. If drawings exists for the site you are completing then 'Click here to see drawings from this site' will open a new form, so that you can scroll through the drawings. If a drawing doesn't exist, a message will appear to tell you."
+    }
+  ]
+}

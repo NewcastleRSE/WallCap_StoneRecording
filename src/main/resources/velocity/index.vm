@@ -5,6 +5,13 @@
     <script src="jquery-3.5.1.js"></script>
 <body>
  
+    <!-- HELP POPUP -->
+    <div id="help_popup" class="popup" style="background: white; border:2px solid black; width:1024px; height: 768px; z-index: 2">
+        <button class="help_close_button" onclick="closeHelp()">close</button>
+        <div id="help_container"></div>
+        <button class="help_close_button" onclick="closeHelp()">close</button>
+    </div>
+
     <!-- STRUCTURE TYPES MAP POPUP -->
     <div id="map-popup" class="popup" style="background: white; border:2px solid black">
         <h1>Click on dot to make selection</h1>
@@ -28,6 +35,47 @@
     #include("velocity/button_form.html")
 
     <script>
+        function uploadImage() {
+            var filename = $("#fossil_photo").prop('files')[0].name;
+            var img = document.createElement("img");
+            img.width = 100;
+            img.height = 100;
+            img.src = filename;
+            document.getElementById('fossil_div').appendChild(img);
+        }
+
+        function uploadImage1() {
+            alert($("form_upload_image")[0]);
+            var file = $("#fossil_photo").prop('files')[0];
+            var formData = new FormData();
+            formData.append("file", file.File);
+            $.ajax({
+                mimeType: 'multipart/form-data',
+                enctype: 'multipart/form-data',
+                dataType: "multipart/form-data",
+                type: "POST",
+                url: "/upload",
+                data: formData,
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function(data) {
+                    alert("Success");
+                },
+                error: function(response) {
+                    $("#result").text(formData);
+                    console.log("ERROR : ", response);
+                    console.log("DATA : " , formData);
+                    console.log("FILE : " , file);
+                    console.log("FORMDATA : ", JSON.stringify(Array.from(formData), '\t', 2));
+                }
+            });
+        }
+
+        function closeHelp() {
+            $("#help_popup").hide("slow");
+        }
+
         // WHEN A BUTTON IS CLICKED IN THE PAGE DO THIS
         function mapButtonClicked(btn) {
             $("body").find(".popup").each(function (index, popup) { $(popup).hide("slow"); });
@@ -109,6 +157,7 @@
             popup.show("slow");
         }
 
+
         // ONCE THE DOCUMENT IS FULLY LOADED
         $(document).ready(function() {
             /* SAMPLE CODE
@@ -119,6 +168,29 @@
                     });
                 });
             });*/
+            // on click STEP 1
+            // A HELP BUTTON WAS CLICKED
+            $("body").find(".help_button").each(function(index, button) {
+                $(button).on("click", function() {
+                    $.ajax({
+                        url: "/fetchHelp",
+                        type: "POST",
+                        dataType: "html",
+                        //data: {"struct": structNumber},
+                        data: {"value": $(button).attr("data-value")},
+                        success: function (response) {
+                            // SHOW HELP
+                            console.log(response);
+                            $("#help_container").html(response);
+                            $("#help_popup").show("slow");
+                        },
+                        error: function (response) {
+                            console.error("Error Response");
+                            console.log(response);
+                        }
+                    })
+                });
+            });
             // A BUTTON IN THE STRUCTURE TYPES SECTION WAS CLICKED
             $("body").find(".structure_type_button").each(function (index, button) {
                 $(button).on("click", function () {
@@ -141,10 +213,42 @@
                     }
                 });
             });
+
+            upload_image.onsubmit = async (e) => {
+                if (e.preventDefault)
+                    e.preventDefault();
+                else
+                    e.returnValue = false;
+
+                let data = FormData(upload_image);
+                $.ajax({
+                    mimeType: 'multipart/form-data',
+                    enctype: 'multipart/form-data',
+                    dataType: "multipart/form-data",
+                    type: "POST",
+                    url: "/upload",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    success: function(data) {
+                        alert("Success");
+                    },
+                    error: function(response) {
+                        $("#result").text(data);
+                        console.log("ERROR : ", response);
+                        console.log("DATA : " , data);
+                        console.log("FILE : " , file);
+                        console.log("ENTRIES : ", data.entries());
+                    }
+                });
+            }
+
             // CLOSE THE POPUP DIV WHEN CLICKED OUTSIDE OF IT
             $(window).click(function (e) {
                 target = $(e.target);
-                if (!target.parents().hasClass("popup") && !target.parents().hasClass("div-table-col-100")) {
+                if (!target.parents().hasClass("popup") && !target.parents().hasClass("div-table-col-100") 
+                && !target.parents().hasClass("help_button") && !$("#help_popup").is(":visible")) {
                     $("body").find(".popup").hide("slow");
                 }
             });

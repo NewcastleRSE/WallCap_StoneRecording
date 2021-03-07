@@ -1,0 +1,68 @@
+{
+  "help_data": [
+    {
+      "key": "Fort",
+      "value": "The Fort button allows you to choose a fort along Hadrian's Wall or the Stanegate. Only forts that have surviving upstanding masonry can be chosen."
+    },
+    {
+      "key": "Milecastle",
+      "value": "The Milecastle button allows you to choose a milecastle along Hadrian's Wall. Only milecastles that have surviving upstanding masonry can be chosen."
+    },
+    {
+      "key": "Turret",
+      "value": "The Turret button allows you to choose a turret along Hadrian's Wall. Only turrets that have surviving upstanding masonry can be chosen."
+    },
+    {
+      "key": "Gateway",
+      "value": "The Gateway button allows you to choose a gateway along Hadrian's Wall. Only gateways that are not part of a milecastle and have surviving upstanding masonry can be chosen."
+    },
+    {
+      "key": "Curtain_wall",
+      "value": "The Curtain Wall button allows you to choose a section of curtain wall along Hadrian's Wall. Only sections that have surviving upstanding masonry can be chosen."
+    },
+    {
+      "key": "valueridge",
+      "value": "The Bridge button allows you to choose a bridge along Hadrian's Wall or the Stanegate. Only bridges that have surviving upstanding masonry can be chosen."
+    },
+    {
+      "key": "Church",
+      "value": "The Church button allows you to choose a church within 5km of Hadrian's Wall. Only churches that have re-used Roman masonry or incorporate Roman sculpture can be chosen."
+    },
+    {
+      "key": "Castle",
+      "value": "The Castle button allows you to choose a castle within 5km of Hadrian's Wall. Only castles that have surviving upstanding masonry or incorporate Roman sculptural remains can be chosen."
+    },
+    {
+      "key": "Dwelling",
+      "value": "The Dwelling button will open a form and allows you to choose a type of dwelling within 5km of Hadrian's Wall. Only dwellings that are Listed Buildings and have re-used Roman masonry are included."
+    },
+    {
+      "key": "House",
+      "value": "The House button allows you to choose a house within 5km of Hadrian's Wall. Only listed buildings that are specifically described as houses on the Listed Buildings Index and have re-used Roman masonry are included."
+    },
+    {
+      "key": "Farmhouse",
+      "value": "The Farmhouse button allows you to choose a farmhouse within 5km of Hadrian's Wall. Only listed buildings that are specifically described as farmhouses on the Listed Buildings Index and have re-used Roman masonry are included."
+    },
+    {
+      "key": "Vicarage",
+      "value": "The Vicarage button allows you to choose a vicarage within 5km of Hadrian's Wall. Only listed buildings that are specifically described as vicarages on the Listed Buildings Index and have re-used Roman masonry are included."
+    },
+    {
+      "key": "Tower",
+      "value": "The Tower button allows you to choose a tower within 5km of Hadrian's Wall. Only listed buildings that are specifically described as towers on the Listed Buildings Index and have re-used Roman masonry are included."
+    },
+    {
+      "key": "Outbuilding",
+      "value": "The Outbuilding button allows you to choose an outbuilding within 5km of Hadrian's Wall. Only listed buildings that are specifically described as barns or outbuildings on the Listed Buildings Index and have re-used Roman masonry are included."
+    },
+    {
+      "key": "valueoundary",
+      "value": "The Boundary button allows you to choose a boundary wall within 5km of Hadrian's Wall. Only boundary walls on the Listed Buildings Index that have re-used Roman masonry are included."
+    },
+    {
+      "key": "Other",
+      "value": "The Other button allows you to choose miscellaneous stone  within 5km of Hadrian's Wall. The stone could be an altar incorporated in later walls or masonry relocated away from the wall for display. Only re-used Roman stone cited in the Listed Buildings Index is included."
+    }
+  ]
+}

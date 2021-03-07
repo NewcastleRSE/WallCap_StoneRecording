@@ -1,6 +1,5 @@
 package uk.ac.ncl.DAO;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,6 +19,7 @@ import com.google.gson.JsonSyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ac.uk.ncl.model.Help;
 import uk.ac.ncl.model.CoreRecord;
 import uk.ac.ncl.model.CoreRecords;
 import uk.ac.ncl.model.TypeMap;
@@ -126,7 +126,6 @@ public class DataController {
             }
             Reader reader = Files.newBufferedReader(Paths.get(jsonfile));
             coreRecords = gson.fromJson(reader, CoreRecords.class);
-            System.out.println("DATA: " + coreRecords.getCorerecords().size());
             return coreRecords;
         } catch (IOException e) {
             // TODO Auto-generated catch block

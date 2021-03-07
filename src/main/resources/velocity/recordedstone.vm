@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Stone Recording</title>
+    <link rel="stylesheet" href="site.css"></head>
+    <script src="jquery-3.5.1.js"></script>
+<body>
+
+<div class="buttonwrapper">
+    <a href="/" class="squarebutton" style="float: left" data-value="/"><span>Home</span></a>
+</div>
+
+<div class="div-table">
+#foreach ($prop in $properties)
+    <div class="div-table-row">
+        <div class="div-texttable-col" style="border:1px solid black">$prop.getKey()</div>
+        <div class="div-texttable-col">$prop.getValue()</div>
+    </div>
+#end
+</div>
+
+
+<div class="buttonwrapper">
+    <a href="/" class="squarebutton" style="float: left" data-value="/"><span>Home</span></a>
+</div>
+
+</body>
+</html>

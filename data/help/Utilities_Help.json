@@ -1,0 +1,12 @@
+{
+  "help_data": [
+    {
+      "key": "Edit_on_off",
+      "value": "Changing the Site List button from OFF (the default) to ON will open the Site List form. Click on any letter at the top to display Site Names beginning with that letter. Click ALL if you want to see all sites. If the black arrow ▲is pointing upwards, then clicking on any of the column headers will sort the records A-Z. If the black arrow ▼ is pointing downwards then the records will be sorted Z-A. You can toggle this by clicking on the arrow. Changing the Site List button to OFF will close the form. Clicking the Close button (X) will do the same.": "Changing the Edit button from OFF (the default) to ON will allow you to change the locked Core Data for a site at the top of this form. This button should only be enabled if you spot a mistake in the Core Data. It is recommended that you change it back to OFF after you have made any changes."
+    },
+    {
+      "key": "Element_list",
+      "value": "Changing the Site List button from OFF (the default) to ON will open the Site List form. Click on any letter at the top to display Site Names beginning with that letter. Click ALL if you want to see all sites. If the black arrow ▲is pointing upwards, then clicking on any of the column headers will sort the records A-Z. If the black arrow ▼ is pointing downwards then the records will be sorted Z-A. You can toggle this by clicking on the arrow. Changing the Site List button to OFF will close the form. Clicking the Close button (X) will do the same.": "Turn this on to show a simple summary of the elements recorded for the current site. This will give you the Site No, the Site Name and importantly the EID number for each element."
+    }
+  ]
+}

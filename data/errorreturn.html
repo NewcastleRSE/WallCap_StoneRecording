@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+</head>
+
+<body>
+    <h1>Caught Exception:</h1>
+    <pre>java.lang.NullPointerException: Cannot invoke \"javax.servlet.http.Part.getName()\" because \"filePart\" is null
+\tat uk.ac.ncl.controller.UploadFileController.uploadFile(UploadFileController.java:34)
+\tat uk.ac.ncl.App.lambda$0(App.java:52)
+\tat spark.RouteImpl$1.handle(RouteImpl.java:72)
+\tat spark.http.matching.Routes.execute(Routes.java:61)
+\tat spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:134)
+\tat spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+\tat org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1584)
+\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+\tat org.eclipse.jetty.server.Server.handle(Server.java:501)
+\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+\tat java.base/java.lang.Thread.run(Thread.java:832)
+</pre>
+    <h1>Caught Exception Rendering DebugScreen:</h1>
+    <pre>java.lang.IllegalArgumentException: freemarker.core.NonStringException: For \"${...}\" content: Expected a string or something automatically convertible to string (number, date or boolean), but this has evaluated to a sequence (ArrayList wrapped into f.t.DefaultListAdapter):
+==> data[k]  [in template \"debugscreen.ftl\" at line 107, column 56]
+
+----
+FTL stack trace (\"~\" means nesting-related):
+\t- Failed at: ${data[k]} auto-escaped  [in template \"debugscreen.ftl\" at line 107, column 54]
+----
+\tat spark.template.freemarker.FreeMarkerEngine.render(FreeMarkerEngine.java:76)
+\tat spark.debug.DebugScreen.handleThrowable(DebugScreen.java:97)
+\tat spark.debug.DebugScreen.handle(DebugScreen.java:70)
+\tat spark.Service$1.handle(Service.java:688)
+\tat spark.http.matching.GeneralError.modify(GeneralError.java:48)
+\tat spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:143)
+\tat spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+\tat org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1584)
+\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+\tat org.eclipse.jetty.server.Server.handle(Server.java:501)
+\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+\tat java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: freemarker.core.NonStringException: For \"${...}\" content: Expected a string or something automatically convertible to string (number, date or boolean), but this has evaluated to a sequence (ArrayList wrapped into f.t.DefaultListAdapter):
+==> data[k]  [in template \"debugscreen.ftl\" at line 107, column 56]
+
+----
+FTL stack trace (\"~\" means nesting-related):
+\t- Failed at: ${data[k]} auto-escaped  [in template \"debugscreen.ftl\" at line 107, column 54]
+----
+\tat freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:390)
+\tat freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+\tat freemarker.core.BuiltInForString._eval(BuiltInForString.java:26)
+\tat freemarker.core.Expression.eval(Expression.java:78)
+\tat freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+\tat freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+\tat freemarker.core.Environment.visit(Environment.java:324)
+\tat freemarker.core.MixedContent.accept(MixedContent.java:54)
+\tat freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+\tat freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:240)
+\tat freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+\tat freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+\tat freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+\tat freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+\tat freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+\tat freemarker.core.Environment.visit(Environment.java:324)
+\tat freemarker.core.MixedContent.accept(MixedContent.java:54)
+\tat freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+\tat freemarker.core.IfBlock.accept(IfBlock.java:48)
+\tat freemarker.core.Environment.visit(Environment.java:324)
+\tat freemarker.core.MixedContent.accept(MixedContent.java:54)
+\tat freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+\tat freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:240)
+\tat freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+\tat freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+\tat freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+\tat freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+\tat freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+\tat freemarker.core.Environment.visit(Environment.java:324)
+\tat freemarker.core.MixedContent.accept(MixedContent.java:54)
+\tat freemarker.core.Environment.visit(Environment.java:324)
+\tat freemarker.core.EscapeBlock.accept(EscapeBlock.java:48)
+\tat freemarker.core.Environment.visit(Environment.java:324)
+\tat freemarker.core.Environment.process(Environment.java:302)
+\tat freemarker.template.Template.process(Template.java:325)
+\tat spark.template.freemarker.FreeMarkerEngine.render(FreeMarkerEngine.java:70)
+\t... 25 more
+</pre>
+</body>
+
+</html>"

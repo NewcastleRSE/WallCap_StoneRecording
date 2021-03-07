@@ -364,14 +364,6 @@ public class StoneRecording {
         this.photographList = photographList;
     }
 
-    public String getDrawing() {
-        return drawing;
-    }
-
-    public void setDrawing(String drawing) {
-        this.drawing = drawing;
-    }
-
     public String getRecordedBy() {
         return recordedBy;
     }
@@ -466,6 +458,148 @@ public class StoneRecording {
 
     public void setSiteElement(String siteElement) {
         this.siteElement = siteElement;
+    }
+
+    /**
+     * @return the eID
+     */
+    public Integer geteID() {
+        return eID;
+    }
+
+    /**
+     * @param eID the eID to set
+     */
+    public void seteID(Integer eID) {
+        this.eID = eID;
+    }
+
+    /**
+     * @return the drawing
+     */
+    public String getDrawing() {
+        return drawing;
+    }
+
+    /**
+     * @param drawing the drawing to set
+     */
+    public void setDrawing(String drawing) {
+        this.drawing = drawing;
+    }
+
+    /**
+     * @param siteNo
+     * @param eID
+     * @param stoneRef
+     * @param face
+     * @param course
+     * @param element
+     * @param length
+     * @param height
+     * @param depth
+     * @param diameter
+     * @param colour
+     * @param grainSize
+     * @param grainShape
+     * @param grainRoundness
+     * @param grainSorting
+     * @param grainTypes
+     * @param cement
+     * @param veinsDiagenesis
+     * @param sedimentaryTextures
+     * @param beddingScale
+     * @param fossils
+     * @param fossilPhoto
+     * @param broadGeology
+     * @param lewisHole
+     * @param reused
+     * @param masonsMark
+     * @param tooling
+     * @param notesComments
+     * @param photographList
+     * @param drawing
+     * @param recordedBy
+     * @param checkedBy
+     * @param dateCreated
+     * @param lastModified
+     * @param recordComplete
+     * @param facePath
+     * @param leftPath
+     * @param rightPath
+     * @param reversePath
+     * @param topPath
+     * @param basePath
+     * @param siteElement
+     */
+    public StoneRecording(Integer siteNo, Integer eID, String stoneRef, String face, String course, String element,
+            String length, String height, String depth, String diameter, String colour, String grainSize,
+            String grainShape, String grainRoundness, String grainSorting, String grainTypes, String cement,
+            String veinsDiagenesis, String sedimentaryTextures, Integer beddingScale, String fossils,
+            String fossilPhoto, String broadGeology, Integer lewisHole, Integer reused, Integer masonsMark,
+            String tooling, String notesComments, String photographList, String drawing, String recordedBy,
+            String checkedBy, String dateCreated, String lastModified, Integer recordComplete, String facePath,
+            String leftPath, String rightPath, String reversePath, String topPath, String basePath,
+            String siteElement) {
+        this.siteNo = siteNo;
+        this.eID = eID;
+        this.stoneRef = stoneRef;
+        this.face = face;
+        this.course = course;
+        this.element = element;
+        this.length = length;
+        this.height = height;
+        this.depth = depth;
+        this.diameter = diameter;
+        this.colour = colour;
+        this.grainSize = grainSize;
+        this.grainShape = grainShape;
+        this.grainRoundness = grainRoundness;
+        this.grainSorting = grainSorting;
+        this.grainTypes = grainTypes;
+        this.cement = cement;
+        this.veinsDiagenesis = veinsDiagenesis;
+        this.sedimentaryTextures = sedimentaryTextures;
+        this.beddingScale = beddingScale;
+        this.fossils = fossils;
+        this.fossilPhoto = fossilPhoto;
+        this.broadGeology = broadGeology;
+        this.lewisHole = lewisHole;
+        this.reused = reused;
+        this.masonsMark = masonsMark;
+        this.tooling = tooling;
+        this.notesComments = notesComments;
+        this.photographList = photographList;
+        this.drawing = drawing;
+        this.recordedBy = recordedBy;
+        this.checkedBy = checkedBy;
+        this.dateCreated = dateCreated;
+        this.lastModified = lastModified;
+        this.recordComplete = recordComplete;
+        this.facePath = facePath;
+        this.leftPath = leftPath;
+        this.rightPath = rightPath;
+        this.reversePath = reversePath;
+        this.topPath = topPath;
+        this.basePath = basePath;
+        this.siteElement = siteElement;
+    }
+
+    /**
+     * 
+     */
+    public StoneRecording() {
+    }
+
+    public String toCSV() {
+        return siteNo + "," + eID + "," + stoneRef + "," + face + "," + course + "," + element + "," + length + ","
+                + height + "," + depth + "," + diameter + "," + colour + "," + grainSize + "," + grainShape + ","
+                + grainRoundness + "," + grainSorting + "," + grainTypes + "," + cement + "," + veinsDiagenesis + ","
+                + sedimentaryTextures + "," + beddingScale + "," + fossils + "," + fossilPhoto + "," + broadGeology
+                + "," + lewisHole + "," + reused + "," + masonsMark + "," + tooling + "," + notesComments + ","
+                + photographList + "," + drawing + "," + recordedBy + "," + checkedBy + "," + dateCreated + ","
+                + lastModified + "," + recordComplete + "," + facePath + "," + leftPath + "," + rightPath + ","
+                + reversePath + "," + topPath + "," + basePath + "," + siteElement;
     }
 
 }

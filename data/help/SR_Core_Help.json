@@ -1,0 +1,56 @@
+{
+  "help_data": [
+    {
+      "key": "Site_No",
+      "value": "This is the unique number for each site that is recorded on the Core Data form. This number may appear more than once in the Stone Recording record, but each entry will have a unique EID number."
+    },
+    {
+      "key": "EID",
+      "value": "The EID is a unique number that identifies an individual entry for each stonework element. This is generated automatically so that the same number isn't entered twice."
+    },
+    {
+      "key": "User_Ref",
+      "value": "The User Ref is a number, letter or a combination of both that has been used on a site drawing. There may be duplicate references on different site drawings, but  the Stone Recording record will always have a unique UID number. Including the User Ref reference makes it easier to cross-reference original drawings with the database record."
+    },
+    {
+      "key": "Face",
+      "value": "Face can be recorded as North, South, East, West or Top. These restricted categories simplify the recording process. You should choose a direction in relation to Ordnance Survey grid north. NNW, for example, would be recorded as North, whereas WNW would be recorded as West. Top is reserved for those cases where the top of a stone within a structure is visible. This is most likely to occur when recording the tops of walls."
+    },
+    {
+      "key": "Course",
+      "value": "Course is recorded as the vertical position of a stone course. One is the first visible course above ground level. This number can be difficult to apply to Coursed Rubble as the courses are often uneven. However, annotating the courses on the field drawing should help in such cases."
+    },
+    {
+      "key": "Element",
+      "value": "Element records part of the structure you are recording. This allows groups of stones, used for the same function, to be easily compared between structures. The site drawing and comments provide a more precise location of individual elements within a structure."
+    },
+    {
+      "key": "Dimensions",
+      "value": "The dimensions are always recorded in the same order, Length of face, Depth into wall and Height. For many sites you will only have the Face length and the Height. For columns and drums you will only have Height and Diameter."
+    },
+    {
+      "key": "Colour",
+      "value": "The colour reference you enter here will depend on whether you have access to a Munsell Soil Colour Chart. If you have then the colour you enter will be derived from this. This should only be done in the field with direct reference to the stone. If you do not have a Munsell chart then a simple description, for example, white, yellow, grey, buff etc will suffice."
+    },
+    {
+      "key": "Broad_geology",
+      "value": "The broad geology is likely to be either sandstone or limestone."
+    },
+    {
+      "key": "Lewis_hole",
+      "value": "A Lewis is a tool that fits in a Lewis hole and was used to help lift large blocks of stone (right). Normally they wouldn't be visible in a structure but can sometimes be seen in re-used blocks of stone placed in a different orientation."
+    },
+    {
+      "key": "Re_used",
+      "value": "Tick this box if the stone has been re-used from somewhere else? This would apply to all stones that have been taken from the wall. It is also possible that stones have been re-used within Roman structures along the wall."
+    },
+    {
+      "key": "Masons_mark",
+      "value": "Tick this box if there any mason's marks visible."
+    },
+    {
+      "key": "Main_tooling_type",
+      "value": "Select a tooling type from the selection of images at the bottom of the form to fill in this box. You will not be able to manually enter a different type."
+    }
+  ]
+}

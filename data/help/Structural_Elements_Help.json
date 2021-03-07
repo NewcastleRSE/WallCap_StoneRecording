@@ -1,0 +1,60 @@
+{
+  "help_data": [
+    {
+      "key": "Foundation",
+      "value": "The foundation stones may or may not be visible at the base of the wall. You may only be able to see the top surface of these stones in some cases. These shouldn't be confused with the footings for the wall which are the squared stones between the foundation and the offset."
+    },
+    {
+      "key": "Footing",
+      "value": "The footings for the wall are the squared stones  between the foundation and the offset."
+    },
+    {
+      "key": "Offset",
+      "value": "The offset is the change in thickness of the wall above the footings."
+    },
+    {
+      "key": "Ashlar",
+      "value": "Ashlar blocks have clean square outlines with finely chiselled margins. The bedding is straight and square to the face and the blocks are consistent in size. The joints between blocks are very thin."
+    },
+    {
+      "key": "Block_in_course",
+      "value": "Block-in-course  consists of large squared blocks that are fitted together like ashlar but not with the same consistency or precision. The stones are larger than normal facing stones. They don't tend to have a chiselled margin and are used mainly for gate piers and bridges."
+    },
+    {
+      "key": "Squared_rubble",
+      "value": "Squared rubble consists of blocks that are roughly squared and are faced roughly, either punched or hammer-dressed. Joints are often worked to a taper. The curtain wall and fort buildings use this type."
+    },
+    {
+      "key": "Coursed_rubble",
+      "value": "Coursed rubble consists of stones that have very little working and are laid in approximate courses. They exhibit few signs of being worked but may be roughly dressed with a walling hammer or punch. Joints direction follows the shape of the stones."
+    },
+    {
+      "key": "Voussoir",
+      "value": "Voussoirs are the wedge-shaped stones that make up arches. The depth of the arch (intrados to extrados) is usually between 600mm - 800mm. They are sometimes reused laid on their face so that the distinctive shape is no longer recognisable."
+    },
+    {
+      "key": "Window_head",
+      "value": "Window heads are carved from a monolithic block to form an arch. Incised lines are added to imitate voussoirs. A simple rectangular slab can also be used as a lintel."
+    },
+    {
+      "key": "Door_lining",
+      "value": "Doors were sometimes be lined with large thin slabs of stone. These can be seen at the bath house at Chesters."
+    },
+    {
+      "key": "Column",
+      "value": "Columns are found in forts and can be monolithic (a single carved stone) or drum (made from a series of sections). Bedding planes for monolithic columns are vertical and horizontal for drum columns."
+    },
+    {
+      "key": "Capital",
+      "value": "A Capital is located at the top of a column or pier. They can be functional, if used in a gateway to a fort, or more elaborate in domestic buildings."
+    },
+    {
+      "key": "String_course",
+      "value": "A string course divides sections of masonry, for example between the curtain wall and the parapet. They are often chamfered."
+    },
+    {
+      "key": "Water_channel",
+      "value": "Water channels have a U-shaped profile and are mostly found in forts but can sometimes be re-used in later structures like field walls."
+    }
+  ]
+}

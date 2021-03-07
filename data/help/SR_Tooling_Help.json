@@ -1,0 +1,52 @@
+{
+  "help_data": [
+    {
+      "key": "Finely_pecked",
+      "value": "The face of the block is finely pecked with a punch. This is typical on finely worked ashlar blocks. Note the plain banding around the perimeter."
+    },
+    {
+      "key": "Diagonal_furrows",
+      "value": "The face of the block is punched with diagonal furrows to form a decorative finish."
+    },
+    {
+      "key": "Claw_tooling",
+      "value": "The face of the block is dressed with a claw to create parallel grooves. The fine claw produced the toolmarks on the left and the coarse claw the toolmarks on the right."
+    },
+    {
+      "key": "Roughly_punched",
+      "value": "The face of the block is roughly punched as a stage in the facing process. Unfinished blocks could display this characteristic."
+    },
+    {
+      "key": "Diamond_broaching",
+      "value": "The face of the block is punched with opposing diagonal furrows to form the diamond broached pattern."
+    },
+    {
+      "key": "Axe",
+      "value": "The face of a soft block of stone is dressed with the heavy use of an axe on the left and with the fine use of an axe on the right."
+    },
+    {
+      "key": "Roughing_out_furrows",
+      "value": "The punch is used to create furrows as part of the roughing out process."
+    },
+    {
+      "key": "Feathered_tooling",
+      "value": "The face of the block is punched with opposing curved furrows. This is found at Chesters bridge abutment."
+    },
+    {
+      "key": "Adze",
+      "value": "The use of an adze with the mason standing over the stone produces these distinctive scoop marks."
+    },
+    {
+      "key": "Add_More",
+      "value": "Click here to add another example of this type of element. If you want to add a different element then you should close this form and select a new element from the core data table."
+    },
+    {
+      "key": "Back_Arrow",
+      "value": "This allows you to scroll backwards through the stone recording records."
+    },
+    {
+      "key": "Forward_Arrow",
+      "value": "The allows you to scroll forwards through the stone recording records."
+    }
+  ]
+}

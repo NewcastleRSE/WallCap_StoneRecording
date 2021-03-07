@@ -1,0 +1,60 @@
+{
+  "help_data": [
+    {
+      "key": "Site_Information",
+      "value": "With the exception of Date of Survey and Surveyors, this information has already been entered into the database. If you spot an error, then clicking on the Edit Mode switch will enable you to make changes."
+    },
+    {
+      "key": "Site_No",
+      "value": "This is a unique number given to each structure within the database. It could be a large complex structure like a fort or a simpler structure like a boundary wall. All structures are composed of structural elements."
+    },
+    {
+      "key": "Site_Name",
+      "value": "This is a name derived from two possible sources, either the National Heritage List or the local Historic Environment Record."
+    },
+    {
+      "key": "County",
+      "value": "These are the current administrative areas of Cumbria, Northumberland and Newcastle Upon Tyne."
+    },
+    {
+      "key": "Parish",
+      "value": "The parish name is the Civil (as opposed to the ecclesiastical) parish name derived from the National Heritage List. Some urban areas are unparished."
+    },
+    {
+      "key": "OS_Grid_Ref",
+      "value": "This is a 12 figure Ordnance Survey grid reference with the first two letter representing the a 100KM grid square. This gives an accuracy of location of one metre."
+    },
+    {
+      "key": "Wall_mile",
+      "value": "This is the Wall Mile system as developed in 1930 and is covered by The Handbook to the Roman Wall. This is a particularly important number if you are recording material from the curtain wall."
+    },
+    {
+      "key": "Date_of_survey",
+      "value": "This is the date of the survey was undertaken. If you spent more than one day surveying then please use the last day of your survey as the date."
+    },
+    {
+      "key": "Surveyors",
+      "value": "Please enter the names of the survey team. This will enable the WallCAP to contact the right person if there are any problems with the data recorded."
+    },
+    {
+      "key": "Date_of_Structure",
+      "value": "This is the date range for the structure you are recording. For structures built with stone removed from the wall the might be a medieval or post-medieval date."
+    },
+    {
+      "key": "Monument_No",
+      "value": "This is the Monument Number given in the National Heritage List. This number will relate to a scheduled monument."
+    },
+    {
+      "key": "Building_No",
+      "value": "This is the Monument Number given in the National Heritage List. This number will relate to a listed building."
+    },
+    {
+      "key": "HER_No",
+      "value": "This is the number given by the local Historic Environment Record. Some structures along the wall do not have an HER No, as they are already covered in the National Heritage List."
+    },
+    {
+      "key": "NMR_No",
+      "value": "This is the number given by the National Monuments Record and related to a 1:10,000 Ordnance Survey sheet. Each monument with a square is given a number. For example, Birdoswald Fort (NY 66 NW 14) is in sheet NY 66 NW and it is the 14th monument on that sheet."
+    }
+  ]
+}
