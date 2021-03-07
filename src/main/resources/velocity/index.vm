@@ -76,6 +76,10 @@
             $("#help_popup").hide("slow");
         }
 
+        function closePopup() {
+            $("#element_popup").hide("slow");
+        }
+
         // WHEN A BUTTON IS CLICKED IN THE PAGE DO THIS
         function mapButtonClicked(btn) {
             $("body").find(".popup").each(function (index, popup) { $(popup).hide("slow"); });
@@ -213,36 +217,6 @@
                     }
                 });
             });
-
-            upload_image.onsubmit = async (e) => {
-                if (e.preventDefault)
-                    e.preventDefault();
-                else
-                    e.returnValue = false;
-
-                let data = FormData(upload_image);
-                $.ajax({
-                    mimeType: 'multipart/form-data',
-                    enctype: 'multipart/form-data',
-                    dataType: "multipart/form-data",
-                    type: "POST",
-                    url: "/upload",
-                    data: data,
-                    processData: false,
-                    contentType: false,
-                    cache: false,
-                    success: function(data) {
-                        alert("Success");
-                    },
-                    error: function(response) {
-                        $("#result").text(data);
-                        console.log("ERROR : ", response);
-                        console.log("DATA : " , data);
-                        console.log("FILE : " , file);
-                        console.log("ENTRIES : ", data.entries());
-                    }
-                });
-            }
 
             // CLOSE THE POPUP DIV WHEN CLICKED OUTSIDE OF IT
             $(window).click(function (e) {

@@ -175,16 +175,12 @@ public class IndexController {
             
             retVal = sb.toString();
         } catch (JsonSyntaxException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (JsonIOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
          } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return retVal;

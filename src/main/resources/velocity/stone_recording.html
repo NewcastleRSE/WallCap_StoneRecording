@@ -1,5 +1,6 @@
 <div id="element_popup" class="popup" style="background: white; border: 2px solid black;">
     <h1>Enter Stone Record</h1>
+    <button class="help_close_button" onclick="closePopup()">close</button>
     <form id="record_stone" action="/recordstone" method="post">
 
         <div class="div-table">
@@ -189,12 +190,12 @@
                 <div class="div-table-col" align="center"><label for=" Notes_Comments">Notes
                         Comments</label><br /><textarea cols="50" rows="5" id="Notes_Comments" value=""
                         name="Notes_Comments"></textarea></div>
-                <!-- UPLOAD IMAGE -->
+                <!-- SELECT IMAGE -->
                 <div class="div-table-col" align="center"><label for="fossil_photo">Fossil photo</label><br />
                     <form id="form_upload_image" name="form_upload_image" method='POST' enctype='multipart/form-data'>
                         <div align="left"><input type='file' id="fossil_photo" name='fossil_photo'></div>
                         <div align="left">
-                            <button type="button" name="upload_picture" id="upload_picture" onclick="uploadImage()">Upload picture</button>
+                            <button type="button" name="upload_picture" id="upload_picture">Upload picture</button>
                             <!--<button type="submit" name="upload_image" id="upload_image">Upload picture</button>-->
                         </div>
                     </form>
@@ -240,4 +241,5 @@
         </div>
 
     </form>
+    <button class="help_close_button" onclick="closePopup()">close</button>
 </div>
