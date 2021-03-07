@@ -19,7 +19,7 @@ import com.google.gson.JsonSyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ac.uk.ncl.model.Help;
+import uk.ac.ncl.model.Help;
 import uk.ac.ncl.model.CoreRecord;
 import uk.ac.ncl.model.CoreRecords;
 import uk.ac.ncl.model.TypeMap;
