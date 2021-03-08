@@ -1,5 +1,6 @@
 package uk.ac.ncl.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -10,10 +11,19 @@ import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletException;
 import javax.servlet.http.Part;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import spark.Request;
+import spark.Response;
+import spark.Service;
+
+import static spark.Spark.staticFiles;
+import uk.ac.ncl.model.FileName;
+import uk.ac.ncl.model.FileNames;
 
 public class UploadFileController {
     private static Logger logger = LoggerFactory.getLogger(UploadFileController.class);
@@ -24,7 +34,6 @@ public class UploadFileController {
 	 * @return
 	 */
 	public static String uploadFile(Request req, String STORAGE) {
-		logger.debug("ENTERED HERE:");
 		String uploadedFileName = null;
 		// TO allow for multipart file uploads
 		req.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement(""));
@@ -47,6 +56,23 @@ public class UploadFileController {
 		} else {
 			return "File " + uploadedFileName + " uploaded successfully.";
 		}
+	}
+
+	public static String getUploadedFilenames(Request request, Response response) {
+		String storage = System.getProperty("user.dir") + "/" + Controller.loadProperties().getProperty("STORAGE");
+		File file = new File(storage);
+		logger.debug("STORAGE: " + storage);
+		FileNames filenames = new FileNames();
+		String[] listOfFiles = file.list();
+		for (int i = 0; i < listOfFiles.length; i++) {
+			FileName filename = new FileName(listOfFiles[i]);
+			System.out.println("FILE: " + i + " " + filename.getFileName());
+			filenames.getFileNames().add(filename);
+		}
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		logger.debug("FILENAMES: " + filenames);
+        response.type("application/json");
+		return gson.toJson(filenames, FileNames.class);
 	}
 
 }

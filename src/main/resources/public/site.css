@@ -142,4 +142,6 @@ a.squarebutton:hover span {
     width   : 100%;
 }
 
-
+#filenames {
+    width:300px;
+}

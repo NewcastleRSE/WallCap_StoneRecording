@@ -190,18 +190,28 @@
                 <div class="div-table-col" align="center"><label for=" Notes_Comments">Notes
                         Comments</label><br /><textarea cols="50" rows="5" id="Notes_Comments" value=""
                         name="Notes_Comments"></textarea></div>
-                <!-- SELECT IMAGE -->
-                <div class="div-table-col" align="center"><label for="fossil_photo">Fossil photo</label><br />
-                    <form id="form_upload_image" name="form_upload_image" method='POST' enctype='multipart/form-data'>
-                        <div align="left"><input type='file' id="fossil_photo" name='fossil_photo'></div>
-                        <div align="left">
-                            <button type="button" name="upload_picture" id="upload_picture">Upload picture</button>
-                            <!--<button type="submit" name="upload_image" id="upload_image">Upload picture</button>-->
-                        </div>
-                    </form>
+                <div class="div-table-col" align="center"><label for="fossil_photo">Fossil photo filename</label><br />
+                    <!-- SELECT IMAGE -->
+                    <div align="left">
+                        <select id="filenames" name="filenames" size="5">
+                            <option value="file1">file1.jpg</option>
+                            <option value="file1">file1.jpg</option>
+                            <option value="file1">file1.jpg</option>
+                            <option value="file1">file1.jpg</option>
+                            <option value="file1">file1.jpg</option>
+                            <option value="file1">file1.jpg</option>
+                        </select>
+                    </div>
+                    <!-- LOAD IMAGE INTO NEXT DIV -->
+                    <div align="left">
+                        <button type="button" name="upload_picture" id="upload_picture" onClick="uploadImage()">Upload picture</button>
+                        <!--<button type="submit" name="upload_image" id="upload_image">Upload picture</button>-->
+                    </div>
                 </div>
-                <div class="div-table-col" id="fossil_div" name="fossil_div" align="center" style="border: 1px solid black; width:100px; height:100px">
-                    
+               
+                <div class="div-table-col" align="center">
+                    <label for="fossil_div">Fossil Photo</label>
+                    <div id="fossil_div" name="fossil_div" align="center" style="border: 1px solid black; width:100px; height:100px"></div>
                 </div>
             </div>
             <!--

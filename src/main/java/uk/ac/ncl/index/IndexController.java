@@ -36,6 +36,10 @@ import uk.ac.ncl.util.ViewUtil;
 
 public class IndexController {
     static Logger logger = LoggerFactory.getLogger(IndexController.class);
+
+    /**
+     * 
+     */
     public static Route serveIndexPage = (Request request, Response response) -> {
         HashMap<String, Object> model = new HashMap<>();
         return ViewUtil.render(request, model, "/velocity/index.vm");
@@ -108,10 +112,8 @@ public class IndexController {
             pw.println(stoneRecording.toCSV());
             pw.close();
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

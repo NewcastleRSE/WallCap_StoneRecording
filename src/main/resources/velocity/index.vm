@@ -35,47 +35,26 @@
     #include("velocity/button_form.html")
 
     <script>
+        // LOAD THE SELECTED IMAGE INTO THE DIV
         function uploadImage() {
-            var filename = $("#fossil_photo").prop('files')[0].name;
-            var img = document.createElement("img");
-            img.width = 100;
-            img.height = 100;
-            img.src = filename;
-            document.getElementById('fossil_div').appendChild(img);
+            try {
+                var filename = $("#fossil_photo").prop('files')[0].name;
+                var img = document.createElement("img");
+                img.width = 100;
+                img.height = 100;
+                img.src = filename;
+                document.getElementById('fossil_div').appendChild(img);
+            } catch (error) {
+                alert("Select a file first.");
+            }
         }
-
-        function uploadImage1() {
-            alert($("form_upload_image")[0]);
-            var file = $("#fossil_photo").prop('files')[0];
-            var formData = new FormData();
-            formData.append("file", file.File);
-            $.ajax({
-                mimeType: 'multipart/form-data',
-                enctype: 'multipart/form-data',
-                dataType: "multipart/form-data",
-                type: "POST",
-                url: "/upload",
-                data: formData,
-                processData: false,
-                contentType: false,
-                cache: false,
-                success: function(data) {
-                    alert("Success");
-                },
-                error: function(response) {
-                    $("#result").text(formData);
-                    console.log("ERROR : ", response);
-                    console.log("DATA : " , formData);
-                    console.log("FILE : " , file);
-                    console.log("FORMDATA : ", JSON.stringify(Array.from(formData), '\t', 2));
-                }
-            });
-        }
-
+     
+        // CLOSE HELP POPUP
         function closeHelp() {
             $("#help_popup").hide("slow");
         }
 
+        // CLOSE STONE RECORDING POPUP
         function closePopup() {
             $("#element_popup").hide("slow");
         }
@@ -217,7 +196,7 @@
                     }
                 });
             });
-
+ 
             // CLOSE THE POPUP DIV WHEN CLICKED OUTSIDE OF IT
             $(window).click(function (e) {
                 target = $(e.target);
