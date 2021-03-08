@@ -67,7 +67,7 @@ public class UploadFileController {
 		for (int i = 0; i < listOfFiles.length; i++) {
 			FileName filename = new FileName(listOfFiles[i]);
 			System.out.println("FILE: " + i + " " + filename.getFileName());
-			filenames.getFileNames().add(filename);
+			filenames.add(filename);
 		}
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		logger.debug("FILENAMES: " + filenames);
