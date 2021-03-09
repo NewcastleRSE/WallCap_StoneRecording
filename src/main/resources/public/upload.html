@@ -3,6 +3,7 @@
 <head>
     <title>Upload a file</title>
     <meta charset="UTF-8">
+    <script src="jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -11,6 +12,36 @@
         <input type='file' name='uploaded_file'>
         <button>Upload picture</button>
     </form>
+    <label for="file_list">Uploaded files:</label>
+    <div id="file_list" name="file_list">
+
+    </div>
+
+    <script>
+
+        // ONCE THE DOCUMENT IS FULLY LOADED
+        $(document).ready(function() {
+            //AJAX CALL FOR POPULATING FOSSIL PHOTO FILENAMES
+            $.ajax({
+                url: "/getFileNames",
+                type: "POST",
+                dataType: "json",
+                data: {},
+                success: function (response) {
+                    console.log("SUCCESS");
+                    let file_list_div = $("#file_list");
+                    for (let fileobject of response.FileNames) {
+                        file_list_div.append(fileobject.FileName);
+                        file_list_div.append("<br>");
+                    }
+                },
+                error: function (response) {
+                    console.log("ERROR");
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>
