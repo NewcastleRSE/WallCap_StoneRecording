@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -28,6 +29,7 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 import uk.ac.ncl.DAO.DataController;
+import uk.ac.ncl.controller.Controller;
 import uk.ac.ncl.model.CoreRecord;
 import uk.ac.ncl.model.Property;
 import uk.ac.ncl.model.StoneRecording;
@@ -56,8 +58,10 @@ public class IndexController {
     public static String recordstone(Request request, Response response) {
         Map<String, Object> model = new HashMap<>();
         List<Property> properties = new ArrayList<Property>();
-        try {
-            File file = new File("Stone_recording.csv");
+        Properties prop = Controller.loadProperties();
+		String STORAGE = prop.getProperty("STORAGE");
+       try {
+            File file = new File(STORAGE + "/Stone_recording.csv");
             FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
@@ -105,7 +109,6 @@ public class IndexController {
                     request.queryParams("top_path"),
 
                     request.queryParams("base_path"), request.queryParams("site_element"));
-            String[] test = request.queryParamsValues("Grain_Types");
 
             request.queryParams().forEach(param -> {
                 if (!(param.equals("Grain_Types") || param.equals("Cement") || param.equals("Veins_diagenesis"))) {

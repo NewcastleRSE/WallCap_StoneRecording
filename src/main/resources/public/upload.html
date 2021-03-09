@@ -31,7 +31,7 @@
                     console.log("SUCCESS");
                     let file_list_div = $("#file_list");
                     for (let fileobject of response.FileNames) {
-                        file_list_div.append(fileobject.FileName);
+                        file_list_div.append("<a href='" + fileobject.FileName + "'>" + fileobject.FileName + "</a>");
                         file_list_div.append("<br>");
                     }
                 },
