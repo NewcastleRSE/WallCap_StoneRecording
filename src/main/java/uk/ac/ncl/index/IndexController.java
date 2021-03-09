@@ -81,14 +81,14 @@ public class IndexController {
 
                     request.queryParams("Fossils"), request.queryParams("Fossil_photo"),
                     request.queryParams("Broad_geology"),
-                    Integer.valueOf(
+                    Boolean.valueOf(
                             request.queryParams("Lewis_hole") == null || request.queryParams("Lewis_hole").equals("")
                                     ? "0"
                                     : request.queryParams("Lewis_hole")),
-                    Integer.valueOf(
+                    Boolean.valueOf(
                             request.queryParams("Reused") == null || request.queryParams("Reused").equals("") ? "0"
                                     : request.queryParams("Reused")),
-                    Integer.valueOf(
+                    Boolean.valueOf(
                             request.queryParams("Masons_mark") == null || request.queryParams("Masons_mark").equals("")
                                     ? "0"
                                     : request.queryParams("Masons_mark")),
@@ -97,7 +97,7 @@ public class IndexController {
 
                     request.queryParams("Recorded_by"), request.queryParams("Checked_by"),
                     request.queryParams("Date_Created"), request.queryParams("Last_Modified"),
-                    Integer.valueOf(request.queryParams("Record_complete") == null
+                    Boolean.valueOf(request.queryParams("Record_complete") == null
                             || request.queryParams("Record_complete").equals("") ? "0"
                                     : request.queryParams("Record_complete")),
                     request.queryParams("Face_Path"), request.queryParams("left_path"),

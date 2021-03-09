@@ -76,13 +76,13 @@ public class StoneRecording {
     private String broadGeology;
     @SerializedName("Lewis_hole")
     @Expose
-    private Integer lewisHole;
+    private Boolean lewisHole;
     @SerializedName("Reused")
     @Expose
-    private Integer reused;
+    private Boolean reused;
     @SerializedName("Masons_mark")
     @Expose
-    private Integer masonsMark;
+    private Boolean masonsMark;
     @SerializedName("Tooling")
     @Expose
     private String tooling;
@@ -109,7 +109,7 @@ public class StoneRecording {
     private String lastModified;
     @SerializedName("Record_complete")
     @Expose
-    private Integer recordComplete;
+    private Boolean recordComplete;
     @SerializedName("face_path")
     @Expose
     private String facePath;
@@ -316,27 +316,27 @@ public class StoneRecording {
         this.broadGeology = broadGeology;
     }
 
-    public Integer getLewisHole() {
+    public Boolean getLewisHole() {
         return lewisHole;
     }
 
-    public void setLewisHole(Integer lewisHole) {
+    public void setLewisHole(Boolean lewisHole) {
         this.lewisHole = lewisHole;
     }
 
-    public Integer getReused() {
+    public Boolean getReused() {
         return reused;
     }
 
-    public void setReused(Integer reused) {
+    public void setReused(Boolean reused) {
         this.reused = reused;
     }
 
-    public Integer getMasonsMark() {
+    public Boolean getMasonsMark() {
         return masonsMark;
     }
 
-    public void setMasonsMark(Integer masonsMark) {
+    public void setMasonsMark(Boolean masonsMark) {
         this.masonsMark = masonsMark;
     }
 
@@ -396,11 +396,11 @@ public class StoneRecording {
         this.lastModified = lastModified;
     }
 
-    public Integer getRecordComplete() {
+    public Boolean getRecordComplete() {
         return recordComplete;
     }
 
-    public void setRecordComplete(Integer recordComplete) {
+    public void setRecordComplete(Boolean recordComplete) {
         this.recordComplete = recordComplete;
     }
 
@@ -536,9 +536,9 @@ public class StoneRecording {
             String length, String height, String depth, String diameter, String colour, String grainSize,
             String grainShape, String grainRoundness, String grainSorting, String[] grainTypes, String[] cement,
             String[] veinsDiagenesis, String sedimentaryTextures, Integer beddingScale, String fossils,
-            String fossilPhoto, String broadGeology, Integer lewisHole, Integer reused, Integer masonsMark,
+            String fossilPhoto, String broadGeology, Boolean lewisHole, Boolean reused, Boolean masonsMark,
             String tooling, String notesComments, String photographList, String drawing, String recordedBy,
-            String checkedBy, String dateCreated, String lastModified, Integer recordComplete, String facePath,
+            String checkedBy, String dateCreated, String lastModified, Boolean recordComplete, String facePath,
             String leftPath, String rightPath, String reversePath, String topPath, String basePath,
             String siteElement) {
         this.siteNo = siteNo;
@@ -594,22 +594,25 @@ public class StoneRecording {
     public String toCSV() {
         return siteNo + "," + eID + "," + stoneRef + "," + face + "," + course + "," + element + "," + length + ","
                 + height + "," + depth + "," + diameter + "," + colour + "," + grainSize + "," + grainShape + ","
-                + grainRoundness + "," + grainSorting + ",\"" + grainTypes + "\",\"" + cement + "\",\"" + veinsDiagenesis + "\","
-                + sedimentaryTextures + "," + beddingScale + "," + fossils + "," + fossilPhoto + "," + broadGeology
-                + "," + lewisHole + "," + reused + "," + masonsMark + "," + tooling + "," + notesComments + ","
-                + photographList + "," + drawing + "," + recordedBy + "," + checkedBy + "," + dateCreated + ","
-                + lastModified + "," + recordComplete + "," + facePath + "," + leftPath + "," + rightPath + ","
-                + reversePath + "," + topPath + "," + basePath + "," + siteElement;
+                + grainRoundness + "," + grainSorting + ",\"" + grainTypes + "\",\"" + cement + "\",\""
+                + veinsDiagenesis + "\"," + sedimentaryTextures + "," + beddingScale + "," + fossils + "," + fossilPhoto
+                + "," + broadGeology + "," + lewisHole + "," + reused + "," + masonsMark + "," + tooling + ","
+                + notesComments + "," + photographList + "," + drawing + "," + recordedBy + "," + checkedBy + ","
+                + dateCreated + "," + lastModified + "," + recordComplete + "," + facePath + "," + leftPath + ","
+                + rightPath + "," + reversePath + "," + topPath + "," + basePath + "," + siteElement;
     }
 
     private String commafyArray(String[] str_array) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < str_array.length; i++) {
-            sb.append(str_array[i]);
-            if (i < str_array.length - 1) {
-                sb.append(",");
+        if (str_array == null)
+            sb.append("");
+        else
+            for (int i = 0; i < str_array.length; i++) {
+                sb.append(str_array[i]);
+                if (i < str_array.length - 1) {
+                    sb.append(",");
+                }
             }
-        }
         return sb.toString();
     }
 
