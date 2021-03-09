@@ -49,8 +49,8 @@ public class App {
 
         get("/download/:file", (req, res) -> downloadFile(req.params(":file")));
         get("/", IndexController.serveIndexPage);
-        get("/getFileNames", (req, res) -> UploadFileController.getUploadedFilenames(req, res));
 
+        post("/getFileNames", (req, res) -> UploadFileController.getUploadedFilenames(req, res));
         post("/upload", (req, res) -> UploadFileController.uploadFile(req, STORAGE));
         post("/submitstone", IndexController.submitStone);
         post("/maps", IndexController.getMap);

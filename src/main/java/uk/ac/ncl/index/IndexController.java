@@ -72,8 +72,8 @@ public class IndexController {
 
                     request.queryParams("Colour"), request.queryParams("Grain_Size"),
                     request.queryParams("Grain_Shape"), request.queryParams("Grain_Roundness"),
-                    request.queryParams("Grain_Sorting"), request.queryParams("Grain_Types"),
-                    request.queryParams("Cement"), request.queryParams("Veins_diagenesis"),
+                    request.queryParams("Grain_Sorting"), request.queryParamsValues("Grain_Types"),
+                    request.queryParamsValues("Cement"), request.queryParamsValues("Veins_diagenesis"),
                     request.queryParams("Sedimentary_textures"),
                     Integer.valueOf(request.queryParams("Bedding_scale") == null
                             || request.queryParams("Bedding_scale").equals("") ? "0"
@@ -105,10 +105,17 @@ public class IndexController {
                     request.queryParams("top_path"),
 
                     request.queryParams("base_path"), request.queryParams("site_element"));
+            String[] test = request.queryParamsValues("Grain_Types");
 
             request.queryParams().forEach(param -> {
-                properties.add(new Property(param, request.queryParams(param)));
+                if (!(param.equals("Grain_Types") || param.equals("Cement") || param.equals("Veins_diagenesis"))) {
+                    properties.add(new Property(param, request.queryParams(param)));
+                }
             });
+
+            properties.add(new Property("Grain_Types", stoneRecording.getGrainTypes()));
+            properties.add(new Property("Cement", stoneRecording.getCement()));
+            properties.add(new Property("Veins_diagenesis", stoneRecording.getVeinsDiagenesis()));
             pw.println(stoneRecording.toCSV());
             pw.close();
         } catch (FileNotFoundException e) {
@@ -171,16 +178,18 @@ public class IndexController {
             Help help = gson.fromJson(reader, Help.class);
             StringBuilder sb = new StringBuilder();
             help.getHelpData().forEach(helpData -> {
-                sb.append("<div style=\"padding: 10px 10px 10px 10px;\"><div style=\"font-style:italic; font-size: small\">" + helpData.getKey() + "</div>");
+                sb.append(
+                        "<div style=\"padding: 10px 10px 10px 10px;\"><div style=\"font-style:italic; font-size: small\">"
+                                + helpData.getKey() + "</div>");
                 sb.append("<div style=\"font-size: small\">" + helpData.getValue() + "</div></div>");
             });
-            
+
             retVal = sb.toString();
         } catch (JsonSyntaxException e) {
             e.printStackTrace();
         } catch (JsonIOException e) {
             e.printStackTrace();
-         } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();

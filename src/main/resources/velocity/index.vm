@@ -38,12 +38,14 @@
         // LOAD THE SELECTED IMAGE INTO THE DIV
         function uploadImage() {
             try {
-                var filename = $("#fossil_photo").prop('files')[0].name;
+                var filename = $("#filenames").val();
                 var img = document.createElement("img");
                 img.width = 100;
                 img.height = 100;
                 img.src = filename;
-                document.getElementById('fossil_div').appendChild(img);
+                let fossilDiv = $("#fossil_div");
+                fossilDiv.html("");
+                fossilDiv.append(img);
             } catch (error) {
                 alert("Select a file first.");
             }
@@ -132,6 +134,23 @@
             $("#Site_No").val($("#Site_No1").val());
             $("#Element").val(structural_element);
             popup.show("slow");
+            //AJAX CALL FOR POPULATING FOSSIL PHOTO FILENAMES
+            $.ajax({
+                url: "/getFileNames", 
+                type: "POST",
+                dataType: "json",
+                data: {},
+                success: function (response) {  
+                    let select = $("#filenames");     
+                    for (let fileobject of response.FileNames) {
+                        let option = new Option(fileobject.FileName, fileobject.FileName);
+                        select.append(option);
+                    }
+                },
+                error: function (response) {
+
+                }
+            });
         }
 
         // SHOW THE DWELLING POPUP

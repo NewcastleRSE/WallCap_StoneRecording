@@ -534,8 +534,8 @@ public class StoneRecording {
      */
     public StoneRecording(Integer siteNo, Integer eID, String stoneRef, String face, String course, String element,
             String length, String height, String depth, String diameter, String colour, String grainSize,
-            String grainShape, String grainRoundness, String grainSorting, String grainTypes, String cement,
-            String veinsDiagenesis, String sedimentaryTextures, Integer beddingScale, String fossils,
+            String grainShape, String grainRoundness, String grainSorting, String[] grainTypes, String[] cement,
+            String[] veinsDiagenesis, String sedimentaryTextures, Integer beddingScale, String fossils,
             String fossilPhoto, String broadGeology, Integer lewisHole, Integer reused, Integer masonsMark,
             String tooling, String notesComments, String photographList, String drawing, String recordedBy,
             String checkedBy, String dateCreated, String lastModified, Integer recordComplete, String facePath,
@@ -556,9 +556,9 @@ public class StoneRecording {
         this.grainShape = grainShape;
         this.grainRoundness = grainRoundness;
         this.grainSorting = grainSorting;
-        this.grainTypes = grainTypes;
-        this.cement = cement;
-        this.veinsDiagenesis = veinsDiagenesis;
+        this.grainTypes = commafyArray(grainTypes);
+        this.cement = commafyArray(cement);
+        this.veinsDiagenesis = commafyArray(veinsDiagenesis);
         this.sedimentaryTextures = sedimentaryTextures;
         this.beddingScale = beddingScale;
         this.fossils = fossils;
@@ -594,12 +594,23 @@ public class StoneRecording {
     public String toCSV() {
         return siteNo + "," + eID + "," + stoneRef + "," + face + "," + course + "," + element + "," + length + ","
                 + height + "," + depth + "," + diameter + "," + colour + "," + grainSize + "," + grainShape + ","
-                + grainRoundness + "," + grainSorting + "," + grainTypes + "," + cement + "," + veinsDiagenesis + ","
+                + grainRoundness + "," + grainSorting + ",\"" + grainTypes + "\",\"" + cement + "\",\"" + veinsDiagenesis + "\","
                 + sedimentaryTextures + "," + beddingScale + "," + fossils + "," + fossilPhoto + "," + broadGeology
                 + "," + lewisHole + "," + reused + "," + masonsMark + "," + tooling + "," + notesComments + ","
                 + photographList + "," + drawing + "," + recordedBy + "," + checkedBy + "," + dateCreated + ","
                 + lastModified + "," + recordComplete + "," + facePath + "," + leftPath + "," + rightPath + ","
                 + reversePath + "," + topPath + "," + basePath + "," + siteElement;
+    }
+
+    private String commafyArray(String[] str_array) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str_array.length; i++) {
+            sb.append(str_array[i]);
+            if (i < str_array.length - 1) {
+                sb.append(",");
+            }
+        }
+        return sb.toString();
     }
 
 }
