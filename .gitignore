@@ -7,3 +7,5 @@
 target/
 externalpublic/
 *.csv
+.idea
+*.iml
