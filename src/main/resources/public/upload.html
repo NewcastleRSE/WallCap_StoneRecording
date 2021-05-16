@@ -4,9 +4,13 @@
     <title>Upload a file</title>
     <meta charset="UTF-8">
     <script src="jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="site.css"></head>
 </head>
 
 <body>
+    <div class="buttonwrapper">
+        <a class="squarebutton help_button" href="/"><span>Back</span></a>
+    </div><br/>
 
     <form method='post' enctype='multipart/form-data' action='/upload'>
         <input type='file' name='uploaded_file'>

@@ -67,7 +67,8 @@
 .popup {
     display      : none;
     position     : fixed;
-    overflow     : auto;
+    overflow     : scroll;
+    max-height   : 80%;
     top          : 50%;
     -ms-transform: translateY(-50%);
     transform    : translateY(-50%);
@@ -78,17 +79,13 @@
     width: 100%;
 }
 
-.map-button-container img {
-    cursor: pointer;
-}
-
-.structure_type_button{
+.map-button-container img, .structure_type_button, .tooling_type_button {
     cursor: pointer;
 }
 
 .help_button {
     width  : fit-content;
-    float  : right;
+    float  : left;
     padding: 0;
     margin : 0;
     border : 0;
@@ -97,7 +94,7 @@
 a.squarebutton {
     background     : transparent url('images/buttons2/square-blue-left.gif') no-repeat top left;
     /**display        : block;*/
-    float          : right;
+    float          : left;
     font           : normal 12px Arial;
     /* Change 12px as desired */
     line-height    : 15px;

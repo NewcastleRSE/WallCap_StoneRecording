@@ -6,7 +6,7 @@
 <body>
     <div class="buttonwrapper">
         <a class="squarebutton help_button" data-value="Site_Data_Help"><span>Help </span></a>
-    </div>
+    </div><br/>
 
     <!-- HELP POPUP -->
     <div id="help_popup" class="popup" style="background: white; border:2px solid black; width:1024px; height: 768px; z-index: 2">
@@ -35,6 +35,11 @@
 
     <!-- BASE FORM -->
     #include("velocity/base_form.html")
+
+    <!-- UPLOAD BUTTON -->
+    <div class="buttonwrapper">
+        <a class="squarebutton help_button" href="/upload.html"><span>Upload Image</span></a>
+    </div><br/>
 
     <!-- BUTTONS -->
     <!--// SELECT STRUCTURE TYPE AND STRUCTURE ELEMENTS-->
@@ -171,6 +176,14 @@
             popup.show("slow");
         }
 
+        // SET MAIN TOOLING TYPE INPUT FIELD
+        function setTooling(btn) {
+            let textbox = $("#Tooling");
+            console.log(btn);
+            textbox.val(btn.attr("data-type").replaceAll('_', ' ').toLowerCase());
+            popup = $("#tooling_popup");
+            popup.hide("slow");
+        }
 
         // ONCE THE DOCUMENT IS FULLY LOADED
         $(document).ready(function() {
@@ -220,7 +233,7 @@
             // THE TOOLING TYPE BUTTON WAS CLICKED
             $("body").find(".tooling_type_button").each(function (index, button) {
                 $(button).on("click", function () {
-                    selectTooling($(button));
+                    setTooling($(button));
                 });
             });
 

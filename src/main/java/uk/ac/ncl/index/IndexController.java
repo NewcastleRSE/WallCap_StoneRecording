@@ -108,7 +108,8 @@ public class IndexController {
                     request.queryParams("right_path"), request.queryParams("reverse_path"),
                     request.queryParams("top_path"),
 
-                    request.queryParams("base_path"), request.queryParams("site_element"));
+                    request.queryParams("base_path"), request.queryParams("site_element")
+            );
 
             request.queryParams().forEach(param -> {
                 if (!(param.equals("Grain_Types") || param.equals("Cement") || param.equals("Veins_diagenesis"))) {
