@@ -166,7 +166,7 @@
         }
 
         // SHOW THE TOOLING POPUP
-        function selectTooling(btn) {
+        function selectTooling() {
             popup = $("#tooling_popup");
             popup.show("slow");
         }
