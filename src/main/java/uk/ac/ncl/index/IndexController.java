@@ -37,101 +37,14 @@ import uk.ac.ncl.model.TypeMap;
 import uk.ac.ncl.util.ViewUtil;
 
 public class IndexController {
-    static Logger logger = LoggerFactory.getLogger(IndexController.class);
-
     /**
-     * 
+     *
      */
     public static Route serveIndexPage = (Request request, Response response) -> {
         HashMap<String, Object> model = new HashMap<>();
         return ViewUtil.render(request, model, "/velocity/index.vm");
 
     };
-
-    /**
-     * Record stone properties as captured in the form by the user
-     * 
-     * @param request
-     * @param response
-     * @return
-     */
-    public static String recordstone(Request request, Response response) {
-        Map<String, Object> model = new HashMap<>();
-        List<Property> properties = new ArrayList<Property>();
-        Properties prop = Controller.loadProperties();
-		String STORAGE = prop.getProperty("STORAGE");
-       try {
-            File file = new File(STORAGE + "/Stone_recording.csv");
-            FileWriter fw = new FileWriter(file, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
-
-            StoneRecording stoneRecording = new StoneRecording(
-                    Integer.valueOf(request.queryParams("Site_No") == null ? "0" : request.queryParams("Site_No")),
-                    Integer.valueOf(request.queryParams("EID") == null || request.queryParams("EID").equals("") ? "0"
-                            : request.queryParams("EID")),
-                    request.queryParams("Stone_Ref"), request.queryParams("Face"), request.queryParams("Course"),
-                    request.queryParams("Element"), request.queryParams("Length"), request.queryParams("Height"),
-                    request.queryParams("Depth"), request.queryParams("Diameter"),
-
-                    request.queryParams("Colour"), request.queryParams("Grain_Size"),
-                    request.queryParams("Grain_Shape"), request.queryParams("Grain_Roundness"),
-                    request.queryParams("Grain_Sorting"), request.queryParamsValues("Grain_Types"),
-                    request.queryParamsValues("Cement"), request.queryParamsValues("Veins_diagenesis"),
-                    request.queryParams("Sedimentary_textures"),
-                    Integer.valueOf(request.queryParams("Bedding_scale") == null
-                            || request.queryParams("Bedding_scale").equals("") ? "0"
-                                    : request.queryParams("Bedding_scale")),
-
-                    request.queryParams("Fossils"), request.queryParams("Fossil_photo"),
-                    request.queryParams("Broad_geology"),
-                    Boolean.valueOf(
-                            request.queryParams("Lewis_hole") == null || request.queryParams("Lewis_hole").equals("")
-                                    ? "0"
-                                    : request.queryParams("Lewis_hole")),
-                    Boolean.valueOf(
-                            request.queryParams("Reused") == null || request.queryParams("Reused").equals("") ? "0"
-                                    : request.queryParams("Reused")),
-                    Boolean.valueOf(
-                            request.queryParams("Masons_mark") == null || request.queryParams("Masons_mark").equals("")
-                                    ? "0"
-                                    : request.queryParams("Masons_mark")),
-                    request.queryParams("Tooling"), request.queryParams("Notes_Comments"),
-                    request.queryParams("Photograph_List"), request.queryParams("Drawing"),
-
-                    request.queryParams("Recorded_by"), request.queryParams("Checked_by"),
-                    request.queryParams("Date_Created"), request.queryParams("Last_Modified"),
-                    Boolean.valueOf(request.queryParams("Record_complete") == null
-                            || request.queryParams("Record_complete").equals("") ? "0"
-                                    : request.queryParams("Record_complete")),
-                    request.queryParams("Face_Path"), request.queryParams("left_path"),
-                    request.queryParams("right_path"), request.queryParams("reverse_path"),
-                    request.queryParams("top_path"),
-
-                    request.queryParams("base_path"), request.queryParams("site_element")
-            );
-
-            request.queryParams().forEach(param -> {
-                if (!(param.equals("Grain_Types") || param.equals("Cement") || param.equals("Veins_diagenesis"))) {
-                    properties.add(new Property(param, request.queryParams(param)));
-                }
-            });
-
-            properties.add(new Property("Grain_Types", stoneRecording.getGrainTypes()));
-            properties.add(new Property("Cement", stoneRecording.getCement()));
-            properties.add(new Property("Veins_diagenesis", stoneRecording.getVeinsDiagenesis()));
-            pw.println(stoneRecording.toCSV());
-            pw.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        model.put("properties", properties);
-        return ViewUtil.render(request, model, "/velocity/recordedstone.vm");
-    };
-
     public static Route submitStone = (Request request, Response response) -> {
         Map<String, Object> model = new HashMap<>();
         request.queryParams().forEach(param -> {
@@ -139,7 +52,6 @@ public class IndexController {
         });
         return ViewUtil.render(request, model, "/velocity/submitstone.vm");
     };
-
     /*
      * Retrieve the appropriate map for the type selected
      */
@@ -151,10 +63,9 @@ public class IndexController {
         String returnVal = gson.toJson(typeMap);
 
         return returnVal.toString();
-    };
-
+    };;
     /*
-    * 
+    *
     */
     public static Route getStructure = (Request request, Response response) -> {
         String siteNo;
@@ -171,7 +82,6 @@ public class IndexController {
         }
         return retval;
     };
-
     public static Route fetchHelp = (Request request, Response response) -> {
         // response.type("application/json");
         String retVal = "";
@@ -200,5 +110,107 @@ public class IndexController {
         }
         return retVal;
     };
+    static Logger logger = LoggerFactory.getLogger(IndexController.class);
+
+/**
+     * Record stone properties as captured in the form by the user
+     *
+     * @param request
+     * @param response
+     * @return
+     */
+    public static String recordstone(Request request, Response response) {
+        Map<String, Object> model = new HashMap<>();
+        List<Property> properties = new ArrayList<Property>();
+        Properties prop = Controller.loadProperties();
+		String STORAGE = prop.getProperty("STORAGE");
+       try {
+            File file = new File(STORAGE + "/Stone_recording.csv");
+            FileWriter fw = new FileWriter(file, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+
+            StoneRecording stoneRecording = new StoneRecording(
+                    Integer.valueOf(request.queryParams("Site_No") == null ? "0" : request.queryParams("Site_No")),
+                    Integer.valueOf(request.queryParams("EID") == null || request.queryParams("EID").equals("") ? "0"
+                            : request.queryParams("EID")),
+                    request.queryParams("Stone_Ref") == null ? "" : request.queryParams("Stone_Ref"),
+                    request.queryParams("Face") == null ? "" : request.queryParams("Face"),
+                    request.queryParams("Course") == null ? "" : request.queryParams("Course"),
+                    request.queryParams("Element") == null ? "" : request.queryParams("Element"),
+                    request.queryParams("Length") == null ? "" : request.queryParams("Length"),
+                    request.queryParams("Height") == null ? "" : request.queryParams("Height"),
+                    request.queryParams("Depth") == null ? "" : request.queryParams("Depth"),
+                    request.queryParams("Diameter") == null ? "" : request.queryParams("Diameter"),
+
+                    request.queryParams("Colour") == null ? "" : request.queryParams("Colour"),
+                    request.queryParams("Grain_Size") == null ? "" : request.queryParams("Grain_Size"),
+                    request.queryParams("Grain_Shape") == null ? "" : request.queryParams("Grain_Shape"),
+                    request.queryParams("Grain_Roundness") == null ? "" : request.queryParams("Grain_Roundness"),
+                    request.queryParams("Grain_Sorting") == null ? "" : request.queryParams("Grain_Sorting"),
+                    request.queryParamsValues("Grain_Types") == null ? new String[]{""} : request.queryParamsValues("Grain_Types"),
+                    request.queryParamsValues("Cement") == null ? new String[]{""} : request.queryParamsValues("Cement"),
+                    request.queryParamsValues("Veins_diagenesis") == null ? new String[]{""} : request.queryParamsValues("Veins_diagenesis"),
+                    request.queryParams("Sedimentary_textures") == null ? "" : request.queryParams("Sedimentary_textures"),
+                    Integer.valueOf(request.queryParams("Bedding_scale") == null
+                            || request.queryParams("Bedding_scale").equals("") ? "0"
+                                    : request.queryParams("Bedding_scale")),
+
+                    request.queryParams("Fossils") == null ? "" : request.queryParams("Fossils"),
+                    request.queryParams("Fossil_photo") == null ? "" : request.queryParams("Fossil_photo"),
+                    request.queryParams("Broad_geology") == null ? "" : request.queryParams("Broad_geology"),
+                    Boolean.valueOf(
+                            request.queryParams("Lewis_hole") == null || request.queryParams("Lewis_hole").equals("")
+                                    ? "0"
+                                    : request.queryParams("Lewis_hole")),
+                    Boolean.valueOf(
+                            request.queryParams("Reused") == null || request.queryParams("Reused").equals("") ? "0"
+                                    : request.queryParams("Reused")),
+                    Boolean.valueOf(
+                            request.queryParams("Masons_mark") == null || request.queryParams("Masons_mark").equals("")
+                                    ? "0"
+                                    : request.queryParams("Masons_mark")),
+                    request.queryParams("Tooling") == null ? "" : request.queryParams("Tooling"),
+                    request.queryParams("Notes_Comments") == null ? "" : request.queryParams("Notes_Comments"),
+                    request.queryParams("Photograph_List") == null ? "" : request.queryParams("Photograph_List"),
+                    request.queryParams("Drawing") == null ? "" : request.queryParams("Drawing"),
+
+                    request.queryParams("Recorded_by") == null ? "" : request.queryParams("Recorded_by"),
+                    request.queryParams("Checked_by") == null ? "" : request.queryParams("Checked_by"),
+                    request.queryParams("Date_Created") == null ? "" : request.queryParams("Date_Created"),
+                    request.queryParams("Last_Modified") == null ? "" : request.queryParams("Last_Modified"),
+                    Boolean.valueOf(request.queryParams("Record_complete") == null
+                            || request.queryParams("Record_complete").equals("") ? "0"
+                                    : request.queryParams("Record_complete")),
+                    request.queryParams("Face_Path") == null ? "" : request.queryParams("Face_Path"),
+                    request.queryParams("left_path") == null ? "" : request.queryParams("left_path"),
+                    request.queryParams("right_path") == null ? "" : request.queryParams("right_path"),
+                    request.queryParams("reverse_path") == null ? "" : request.queryParams("reverse_path"),
+                    request.queryParams("top_path") == null ? "" : request.queryParams("top_path"),
+
+                    request.queryParams("base_path") == null ? "" : request.queryParams("base_path"),
+                    request.queryParams("site_element") == null ? "" : request.queryParams("site_element")
+            );
+
+            request.queryParams().forEach(param -> {
+                if (!(param.equals("Grain_Types") || param.equals("Cement") || param.equals("Veins_diagenesis"))) {
+                    properties.add(new Property(param, request.queryParams(param)));
+                }
+            });
+
+            properties.add(new Property("Grain_Types", stoneRecording.getGrainTypes()));
+            properties.add(new Property("Cement", stoneRecording.getCement()));
+            properties.add(new Property("Veins_diagenesis", stoneRecording.getVeinsDiagenesis()));
+            pw.println(stoneRecording.toCSV());
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        model.put("properties", properties);
+        return ViewUtil.render(request, model, "/velocity/recordedstone.vm");
+    }
 
 }
