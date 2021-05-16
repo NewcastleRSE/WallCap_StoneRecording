@@ -4,7 +4,10 @@
     <link rel="stylesheet" href="site.css"></head>
     <script src="jquery-3.5.1.js"></script>
 <body>
- 
+    <div class="buttonwrapper">
+        <a class="squarebutton help_button" data-value="Site_Data_Help"><span>Help </span></a>
+    </div>
+
     <!-- HELP POPUP -->
     <div id="help_popup" class="popup" style="background: white; border:2px solid black; width:1024px; height: 768px; z-index: 2">
         <button class="help_close_button" onclick="closeHelp()">close</button>
@@ -26,6 +29,9 @@
 
     <!-- DWELLING POPUP -->
     #include("velocity/dwelling.html")
+
+    <!-- TOOLING POPUP -->
+    #include("velocity/tooling.html")
 
     <!-- BASE FORM -->
     #include("velocity/base_form.html")
@@ -159,6 +165,12 @@
             popup.show("slow");
         }
 
+        // SHOW THE TOOLING POPUP
+        function selectTooling(btn) {
+            popup = $("#tooling_popup");
+            popup.show("slow");
+        }
+
 
         // ONCE THE DOCUMENT IS FULLY LOADED
         $(document).ready(function() {
@@ -205,6 +217,13 @@
                     selectDwelling($(button));
                 });
             });
+            // THE TOOLING TYPE BUTTON WAS CLICKED
+            $("body").find(".tooling_type_button").each(function (index, button) {
+                $(button).on("click", function () {
+                    selectTooling($(button));
+                });
+            });
+
             // A BUTTON IN THE STRUCTURAL ELEMENTS SECTION WAS CLICKED
             $("body").find(".structure_element_button").each(function (index, button) {
                 $(button).on("click", function () {
