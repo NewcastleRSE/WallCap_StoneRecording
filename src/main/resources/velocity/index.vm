@@ -45,6 +45,10 @@
     <!--// SELECT STRUCTURE TYPE AND STRUCTURE ELEMENTS-->
     #include("velocity/button_form.html")
 
+    <div class="reference_container">
+
+    </div>
+
     <script>
         // LOAD THE SELECTED IMAGE INTO THE DIV
         function uploadImage() {
@@ -130,6 +134,13 @@
                     $("#HER_No").val(response.HER_No);
                     $("#NMR_No").val(response.NMR_No);
                     $("#Monument_No").val(response.Monument_No);
+
+                    console.log(response);
+                    for (let imageName of response.ReferenceImages) {
+                        $("body").find(".reference_container").append(
+                            $('<img src="' + imageName + '" alt="image not found"></img>')
+                        );
+                    }
 
                     $("body").find(".popup").hide("slow");
                 },

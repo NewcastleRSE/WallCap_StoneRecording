@@ -74,6 +74,7 @@ public class IndexController {
             if (request.queryParams("struct") != null) {
                 siteNo = request.queryParams("struct");
                 CoreRecord coreRecord = DataController.getCoreRecords().get(siteNo);
+                System.out.println("REFERENCES -> " + coreRecord.getReferenceImages());
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
                 retval = gson.toJson(coreRecord, CoreRecord.class);
             }

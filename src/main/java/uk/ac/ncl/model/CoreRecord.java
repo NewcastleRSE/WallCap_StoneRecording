@@ -6,6 +6,9 @@ import com.google.gson.annotations.SerializedName;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CoreRecord {
     static Logger logger = LoggerFactory.getLogger(CoreRecord.class);
     @Expose
@@ -62,6 +65,9 @@ public class CoreRecord {
     @Expose
     @SerializedName("Description")
     String Description;
+    @Expose
+    @SerializedName("ReferenceImages")
+    List<String> ReferenceImages = null;
 
     /**
      * @param site_No
@@ -82,11 +88,14 @@ public class CoreRecord {
      * @param stonework_Element
      * @param scale
      * @param description
+     * @param referenceImages
      */
     public CoreRecord(String site_No, String site_Name, String county, String parish, String oS_Grid_Ref,
             String wall_Mile, String hER_No, String monument_No, String nMR_No, String building_No,
             String date_of_Survey, String surveyors, String checked_by, String type_of_Structure,
-            String date_of_Structure, String stonework_Element, String scale, String description) {
+            String date_of_Structure, String stonework_Element, String scale, String description,
+            List<String> referenceImages) {
+        System.out.println("INITIALISING CORERECORD 2");
         Site_No = site_No;
         Site_Name = site_Name;
         County = county;
@@ -105,6 +114,8 @@ public class CoreRecord {
         Stonework_Element = stonework_Element;
         Scale = scale;
         Description = description;
+        ReferenceImages = referenceImages;
+        System.out.println("REFERENCE DEFINED -> " + ReferenceImages);
     }
 
     /**
@@ -357,6 +368,18 @@ public class CoreRecord {
      */
     public void setDescription(String description) {
         Description = description;
+    }
+
+    public List<String> getReferenceImages() {
+        return ReferenceImages;
+    }
+
+    public void setReferenceImages(List<String> referenceImages) {
+        ReferenceImages = referenceImages;
+    }
+
+    public void addReferenceImage(String referenceImage) {
+        ReferenceImages.add(referenceImage);
     }
 
 }
