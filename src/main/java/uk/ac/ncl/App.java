@@ -51,6 +51,7 @@ public class App {
         get("/", IndexController.serveIndexPage);
 
         post("/getFileNames", (req, res) -> UploadFileController.getUploadedFilenames(req, res));
+        post("/deleteFileName", (req, res) -> UploadFileController.deleteUploadedFilename(req, res));
         post("/upload", (req, res) -> UploadFileController.uploadFile(req, STORAGE));
         post("/submitstone", IndexController.submitStone);
         post("/maps", IndexController.getMap);

@@ -95,7 +95,6 @@ public class CoreRecord {
             String date_of_Survey, String surveyors, String checked_by, String type_of_Structure,
             String date_of_Structure, String stonework_Element, String scale, String description,
             List<String> referenceImages) {
-        System.out.println("INITIALISING CORERECORD 2");
         Site_No = site_No;
         Site_Name = site_Name;
         County = county;
@@ -115,7 +114,6 @@ public class CoreRecord {
         Scale = scale;
         Description = description;
         ReferenceImages = referenceImages;
-        System.out.println("REFERENCE DEFINED -> " + ReferenceImages);
     }
 
     /**

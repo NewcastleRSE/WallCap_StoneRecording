@@ -72,4 +72,14 @@ public class UploadFileController {
 		return gson.toJson(filenames, FileNames.class);
 	}
 
+	public static String deleteUploadedFilename(Request request, Response reponse) {
+		String storage = System.getProperty("user.dir") + "/" + Controller.loadProperties().getProperty("STORAGE");
+		File toDelete = new File(storage + "\\" + request.queryParams("filename"));
+		System.out.println("DELETING: " + toDelete);
+		if (toDelete.exists()) {
+			System.out.println(toDelete.delete());
+		}
+		return "{}";
+	}
+
 }

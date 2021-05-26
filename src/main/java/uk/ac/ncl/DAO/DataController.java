@@ -62,12 +62,19 @@ public class DataController {
                 if (!line.equals("")) {
                     String[] tokens = line.split(",");
                     ArrayList<String> referenceImages = new ArrayList<>();
-                    referenceImages.add("images/maps/Boundary_small.png"); // TEMPORARY
+                    File referenceImageDir = new File("src/main/resources/public/images/drawings/" + tokens[1].replaceAll(" ", "_") + "/");
+                    if (referenceImageDir.exists()) {
+                        for (File f : referenceImageDir.listFiles()) {
+                            if (!f.isDirectory()) {
+                                String path = f.getAbsolutePath();
+                                referenceImages.add(path.substring(path.indexOf("images\\")));
+                            }
+                        }
+                    }
                     CoreRecord coreRecord = new CoreRecord(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4],
                             tokens[5], tokens[6], tokens[7], tokens[8], tokens[9], tokens[10], tokens[11], tokens[12],
                             tokens[13], tokens[14], tokens[15], tokens[16], tokens[17], referenceImages);
                     records.getCorerecords().add(coreRecord);
-                    System.out.println("INITIALISING CORERECORD 3");
                 }
             }
             sc.close();

@@ -23,6 +23,23 @@
 
     <script>
 
+        function deletePicture(filename) {
+            console.log(filename);
+            $.ajax({
+                url: "/deleteFileName",
+                type: "POST",
+                dataType: "json",
+                data: {"filename": filename},
+                success: function (response) {
+                    console.log("Deleted " + filename);
+                    location.reload();
+                },
+                error: function (response) {
+                    console.log(response);
+                }
+            });
+        }
+
         // ONCE THE DOCUMENT IS FULLY LOADED
         $(document).ready(function() {
             //AJAX CALL FOR POPULATING FOSSIL PHOTO FILENAMES
@@ -36,6 +53,7 @@
                     let file_list_div = $("#file_list");
                     for (let fileobject of response.FileNames) {
                         file_list_div.append("<a href='" + fileobject.FileName + "'>" + fileobject.FileName + "</a>");
+                        file_list_div.append("&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' onclick='deletePicture(\"" + fileobject.FileName + "\")'>delete</a>");
                         file_list_div.append("<br>");
                     }
                 },
